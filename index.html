@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimal-ui">
-    <title>Annex - Responsive Bootstrap 4 Admin Dashboard</title>
+    <title>Be safe Stay Safe</title>
     <meta content="Admin Dashboard" name="description">
     <meta content="Mannatthemes" name="author">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +14,8 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 
 <body>
@@ -113,9 +115,9 @@
             <div class="container-fluid">
                 <div id="navigation">
                     <!-- Navigation Menu-->
-                    <ul class="navigation-menu">
-                        <li class="has-submenu"><a href="index.html"><i class="mdi mdi-airplay"></i>Dashboard</a></li>
-                        <li class="has-submenu"><a href="#"><i class="mdi mdi-layers"></i>Advanced UI</a>
+                    <ul class="navigation-menu mb-2 ml-2">
+                        <li class="has-submenu"><a href="index.html"><i class="fas fa-house-damage"></i>Home</a></li>
+                        <li class="has-submenu"><a href="#"><i class="fab fa-adn"></i>Applications</a>
                             <ul class="submenu">
                                 <li><a href="advanced-highlight.html">Highlight</a></li>
                                 <li><a href="advanced-rating.html">Rating</a></li>
@@ -124,9 +126,7 @@
                             </ul>
                         </li>
 
-
-
-                        <li class="has-submenu"><a href="#"><i class="mdi mdi-bullseye"></i>User Interface</a>
+                        <li class="has-submenu"><a href="#"><i class="fas fa-tools"></i>Tools</a>
                             <ul class="submenu megamenu">
                                 <li>
                                     <ul>
@@ -160,7 +160,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="has-submenu"><a href="#"><i class="mdi mdi-gauge"></i>Components</a>
+                        <li class="has-submenu"><a href="#"><i class="fas fa-poll"></i>Servey</a>
                             <ul class="submenu">
                                 <li class="has-submenu"><a href="#">Forms</a>
                                     <ul class="submenu">
@@ -232,12 +232,14 @@
                         </li>
                         <!-- Search Bar -->
 
-                        <li class="has-submenu">
+                        <li class="has-submenu ml-auto">
+                            <div class="container">
                             <form class="list-inline-item form-inline ml-auto">
                                 <input type="text" class="form-control mr-2" placeholder="Search">
                                 <button class="btn btn-primary btn-outline-light">Search</button>
                             </form>
-                        </li>                        
+                        </div> 
+                        </li>                       
                     </ul><!-- End navigation menu -->
                 </div><!-- end #navigation -->
             </div><!-- end container -->
