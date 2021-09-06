@@ -3,7 +3,72 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Responsive Side Navigation Bar</title>
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="./styles.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+    
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+    
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+    </style>
 </head>
 <body>
 
@@ -15,7 +80,7 @@
        <div class="three"></div>
     </div>
     <div class="top_menu">
-      <div class="logo">logo</div>
+      <div class="logo"><img src="./img/logo.png" height="50"></div>
       <ul>
         <li><a href="#">
           <i class="fas fa-search"></i></a></li>
@@ -31,44 +96,139 @@
   
   <div class="sidebar">
       <ul>
-        <li><a href="#">
+        <li><a href="#" class="active">
           <span class="icon"><i class="fas fa-book"></i></span>
-          <span class="title">Books</span></a></li>
+          <span class="title">General</span></a></li>
         <li><a href="#">
           <span class="icon"><i class="fas fa-file-video"></i></span>
-          <span class="title">Movies</span>
+          <span class="title">Site</span>
           </a></li>
         <li><a href="#">
           <span class="icon"><i class="fas fa-volleyball-ball"></i></span>
-          <span class="title">Sports</span>
+          <span class="title">HR</span>
           </a></li>
-        <li><a href="#" class="active">
+        <li><a href="#">
           <span class="icon"><i class="fas fa-blog"></i></span>
-          <span class="title">Blogs</span>
+          <span class="title">Licences</span>
           </a></li>
         <li><a href="#">
           <span class="icon"><i class="fas fa-leaf"></i></span>
-          <span class="title">Nature</span>
+          <span class="title">Fire Safety</span>
           </a></li>
+          <li><a href="#">
+            <span class="icon"><i class="fas fa-leaf"></i></span>
+            <span class="title">Electrical Safety</span>
+            </a></li>          
     </ul>
   </div>
-  
   <div class="main_container">
     <div class="item">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur!
-    </div>
-    <div class="item">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur!
-    </div>
-    <div class="item">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur!
-    </div>
-    <div class="item">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur!
+      <div class="form-group">
+        <div>
+          <form>
+            <label for="country">Years of Data</label>
+            <select id="country" name="country">
+              <option value="2021">2021</option>
+            </select>
+
+            <label for="fname">Type Of Company</label>
+            <input type="text" id="fname" name="firstname" placeholder="Type of Your company..">
+        
+            <label for="lname">Name Of Company</label>
+            <input type="text" id="lname" name="lastname" placeholder="Name of your company..">
+
+            <label for="lname">Name Of Branch</label>
+            <input type="text" id="lname" name="lastname" placeholder="Name of your branch..">
+
+            <div class="form-group col-md-2">
+              <label for="inputZip">Branch Code</label>
+              <input type="text" class="form-control" id="inputZip">
+            </div>
+        
+          </form>
+        </div>
     </div>
   </div>
-</div>
+         
+    <div class="item">
 
+    </div>
+    
+    <div class="item">
+      <form>
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="First name">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Last name">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="item">
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Password</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+    </div>
+    <div class="item">
+      <div>
+        <form>
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+        
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      
+    </div>
+  </div>
 
 <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -79,6 +239,6 @@
     });
   });
 </script>
-	
+
 </body>
 </html>
