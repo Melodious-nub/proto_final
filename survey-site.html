@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Responsive Side Navigation Bar</title>
+	<title>STS-Site-Data</title>
 	<link rel="stylesheet" href="./styles.css">
   <style>
     * {
@@ -36,6 +36,7 @@
     input[type=submit]:hover {
       background-color: #45a049;
     }
+   
     
     .container {
       border-radius: 5px;
@@ -97,10 +98,10 @@
   
   <div class="sidebar">
       <ul>
-        <li><a href="#" class="active">
+        <li><a href="#">
           <span class="icon"><i class="fas fa-book"></i></span>
           <span class="title">General</span></a></li>
-        <li><a href="#">
+        <li><a href="#" class="active">
           <span class="icon"><i class="fas fa-file-video"></i></span>
           <span class="title">Site</span>
           </a></li>
@@ -127,10 +128,28 @@
       <div class="form-group">
         <div>
           <form>
-            <label for="country">Years of Data</label>
+            <h2>Building Info:</h2><br>
+            <h4>Building Structural info: </h4><br>
+            <label for="country">Building No: </label>
             <select id="country" name="country">
-              <option value="2021">2021</option>
-            </select>
+              <option value="2021">1</option>
+            </select>     
+            
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optradio">Option 1
+              </label>
+            </div>
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optradio">Option 2
+              </label>
+            </div>
+            <div class="form-check-inline disabled">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optradio" disabled>Option 3
+              </label>
+            </div>
 
             <label for="fname">Type Of Company</label>
             <input type="text" id="fname" name="firstname" placeholder="Type of Your company..">
@@ -155,7 +174,6 @@
       <div class="form-group">
         <div>
           <form>
-
             <label for="fname">Year Of Establistment</label>
             <input type="text" id="fname" name="firstname" placeholder="Establistment Year..">
         
@@ -201,8 +219,7 @@
 
             <br><br>
             
-            <input type="submit" value="Save & Submit">
-            
+            <input type="submit" value="Save & Submit">            
 
           </form>
         </div>   
