@@ -50,6 +50,8 @@
       background-color: #f2f2f2;
       padding: 20px;
     }
+
+    
     
     .col-25 {
       float: left;
@@ -109,7 +111,7 @@
         <li><a href="#">
           <span class="icon"><i class="fas fa-book"></i></span>
           <span class="title">General</span></a></li>
-        <li><a href="#" class="active">
+        <li><a href="#">
           <span class="icon"><i class="fas fa-file-video"></i></span>
           <span class="title">Site</span>
           </a></li>
@@ -117,7 +119,7 @@
           <span class="icon"><i class="fas fa-volleyball-ball"></i></span>
           <span class="title">HR</span>
           </a></li>
-        <li><a href="#">
+        <li><a href="#" class="active">
           <span class="icon"><i class="fas fa-blog"></i></span>
           <span class="title">Licences</span>
           </a></li>
@@ -136,22 +138,14 @@
       <div class="form-group">
         <div>
           <form>
-            <h2>Building Info:</h2><br>
-            <h4>Building Structural info: </h4><br>
-            <label for="country">Building No: </label>
-            <select id="country" name="country">
-              <option value="1">1</option>
-            </select> <br><br>
-
-          <div class="controls"> Status: 
-            <label class="radio" style="margin-left: 10px;">
-              <input type="radio" name="foo" value="1">
-              Owned
-            </label>
-            <label class="radio">
-              <input type="radio" name="foo" value="2">
-              Rented
-            </label>
+            <h3 style="text-align: center;">Status</h3>
+            <div class="radio-container">
+                <input type="radio" id="owned" name="status">
+                <label for="owned"> Owned</label>
+            </div>
+            <div class="radio-container">
+              <input type="radio" id="rented" name="status">
+              <label for="rented"> Rented</label>
           </div>
 
             <label for="floor">Number of Floor:</label>

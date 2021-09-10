@@ -50,6 +50,8 @@
       background-color: #f2f2f2;
       padding: 20px;
     }
+
+    
     
     .col-25 {
       float: left;
@@ -109,7 +111,7 @@
         <li><a href="#">
           <span class="icon"><i class="fas fa-book"></i></span>
           <span class="title">General</span></a></li>
-        <li><a href="#" class="active">
+        <li><a href="#">
           <span class="icon"><i class="fas fa-file-video"></i></span>
           <span class="title">Site</span>
           </a></li>
@@ -117,7 +119,7 @@
           <span class="icon"><i class="fas fa-volleyball-ball"></i></span>
           <span class="title">HR</span>
           </a></li>
-        <li><a href="#">
+        <li><a href="#" class="active">
           <span class="icon"><i class="fas fa-blog"></i></span>
           <span class="title">Licences</span>
           </a></li>
@@ -136,35 +138,53 @@
       <div class="form-group">
         <div>
           <form>
-            <h2>Building Info:</h2><br>
-            <h4>Building Structural info: </h4><br>
-            <label for="country">Building No: </label>
-            <select id="country" name="country">
-              <option value="1">1</option>
-            </select> <br><br>
 
-          <div class="controls"> Status: 
-            <label class="radio" style="margin-left: 10px;">
-              <input type="radio" name="foo" value="1">
-              Owned
-            </label>
-            <label class="radio">
-              <input type="radio" name="foo" value="2">
-              Rented
-            </label>
-          </div>
-
-            <label for="floor">Number of Floor:</label>
-            <input type="number" id="lname" name="floor" placeholder="Floor number..">
+            <label for="fire">Existing Fire Extinguisher:</label>
+            <input type="number" id="lname" name="exting" placeholder="Fire Extinguisher number..">
  
-            <label for="floor">Number of used Floor:</label>
-            <input type="number" id="lname" name="floor_used" placeholder="Used floor Number..">
+            <label for="fire">Existing Fire Hose:</label>
+            <input type="number" id="lname" name="hose" placeholder="Fire Hose Number..">
 
-            <label for="floor">Total Floor Area:(square feet)</label>
-            <input type="number" id="lname" name="floor_area" placeholder="Floor area..">            
+            <label for="fire">Existing Sprinkler:</label>
+            <input type="number" id="lname" name="sprinkler" placeholder="Sprinkler Number..">            
 
-            <label for="floor">Height:</label>
-            <input type="number" id="lname" name="lastname" placeholder="Height..">
+            <label for="fire">Existing Smoke Detector:</label>
+            <input type="number" id="lname" name="smoke" placeholder="Smoke Detector Number..">
+
+            <label for="fire">Existing Fire Alarm:</label>
+            <input type="number" id="lname" name="alarm" placeholder="Fire Alarm Number..">
+
+            <label for="fire">Existing Floor Exit:</label>
+            <input type="number" id="lname" name="exit" placeholder="Floor Exit Number..">
+
+            <label for="fire">Existing Fire Fighter:</label>
+            <input type="number" id="lname" name="fighter" placeholder="Fire Fighter Number..">
+
+            <label for="fire">Existing Fire Rescuer:</label>
+            <input type="number" id="lname" name="rescuer" placeholder="Fire Rescuer Number..">
+
+
+            <label for="fire">Existing First Aider:</label>
+            <input type="number" id="lname" name="aider" placeholder="First Aider Number..">
+
+            <label for="fire">Number Of Fire Drill Per Month:</label>
+            <input type="number" id="lname" name="drillm" placeholder="Fire Drill Number..">
+
+            <label for="fire">Number Of Fire Drill Per Year:</label>
+            <input type="number" id="lname" name="drilly" placeholder="Fire Drill Number..">
+
+            <label for="fire">Frequency Of Checking Temperature Per Day:</label>
+            <input type="number" id="lname" name="temp" placeholder="Number..">
+
+            <label for="fire">Frequency of checking Pressure Per Day:</label>
+            <input type="number" id="lname" name="pressure" placeholder="Number..">
+
+            <label for="fire">Frequency Of Checking Leakage Per Month:</label>
+            <input type="number" id="lname" name="leakage" placeholder="Number..">
+
+            <label for="fire">Existing First Aid Box:</label>
+            <input type="number" id="lname" name="abox" placeholder="Number..">
+
             <br><br>          
             <input type="submit" value="Save & Submit">
             
