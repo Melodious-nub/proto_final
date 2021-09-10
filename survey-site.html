@@ -16,6 +16,13 @@
       border-radius: 4px;
       resize: vertical;
     }
+    input[type=number], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }    
     
     label {
       padding: 12px 12px 12px 0;
@@ -71,6 +78,7 @@
       }
     }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
 </head>
 <body>
 
@@ -132,39 +140,33 @@
             <h4>Building Structural info: </h4><br>
             <label for="country">Building No: </label>
             <select id="country" name="country">
-              <option value="2021">1</option>
-            </select>     
+              <option value="1">1</option>
+            </select> <br><br>
+
+            Status:
+            <div class="radio-container">
+                <input type="radio" id="owned" name="status">
+                <label for="owned"> Owned</label>
+            </div>
+            <div class="radio-container">
+              <input type="radio" id="rented" name="status">
+              <label for="rented"> Rented</label>
+          </div>
+
+            <label for="floor">Number of Floor:</label>
+            <input type="number" id="lname" name="floor" placeholder="Floor number..">
+ 
+            <label for="floor">Number of used Floor:</label>
+            <input type="number" id="lname" name="floor_used" placeholder="Used floor Number..">
+
+            <label for="floor">Total Floor Area:(square feet)</label>
+            <input type="number" id="lname" name="floor_area" placeholder="Floor area..">            
+
+            <label for="floor">Height:</label>
+            <input type="number" id="lname" name="lastname" placeholder="Height..">
+            <br><br>          
+            <input type="submit" value="Save & Submit">
             
-            <div class="form-check-inline">
-              <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="optradio">Option 1
-              </label>
-            </div>
-            <div class="form-check-inline">
-              <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="optradio">Option 2
-              </label>
-            </div>
-            <div class="form-check-inline disabled">
-              <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="optradio" disabled>Option 3
-              </label>
-            </div>
-
-            <label for="fname">Type Of Company</label>
-            <input type="text" id="fname" name="firstname" placeholder="Type of Your company..">
-        
-            <label for="lname">Name Of Company</label>
-            <input type="text" id="lname" name="lastname" placeholder="Name of your company..">
-
-            <label for="lname">Name Of Branch</label>
-            <input type="text" id="lname" name="lastname" placeholder="Name of your branch..">
-
-            <div class="form-group col-md-2">
-              <label for="inputZip">Branch Code</label>
-              <input type="text" class="form-control" id="inputZip">
-            </div>
-        
           </form>
         </div>
     </div>
@@ -172,59 +174,9 @@
          
     <div class="item">
       <div class="form-group">
-        <div>
-          <form>
-            <label for="fname">Year Of Establistment</label>
-            <input type="text" id="fname" name="firstname" placeholder="Establistment Year..">
-        
-            <label for="lname">Contact Person</label>
-            <input type="text" id="lname" name="lastname" placeholder="Contact Number..">
 
-            <div class="form-group">
-              <label for="inputAddress">Address</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main Dhaka">
-            </div>
-
-            <label for="lname">GPS Cordinate</label>
-            <input type="text" id="lname" name="lastname" placeholder="latitude,longitude">
-
-            <div class="form-group">
-              <label for="inputCity">City</label>
-              <input type="text" class="form-control" id="inputCity" placeholder="City name..">
-            </div>
-
-            <div class="form-group">
-              <label for="inputCountry">Country</label>
-              <input type="text" class="form-control" id="inputCountry" placeholder="Country name..">
-            </div>     
-        
-          </form>
-        </div>
     </div>      
-  </div><br><br>
-    
-    <div class="item">
-      <div class="form-group">
-        <div>
-          <form>
-
-            <label for="fname">Email</label>
-            <input type="text" id="fname" name="firstname" placeholder="abcd@something.com">
-
-            <label for="fname">Website</label>
-            <input type="text" id="fname" name="firstname" placeholder="www.something.com">
-            
-            <label for="fname">Contact Number</label>
-            <input type="text" id="fname" name="firstname" placeholder="8801xxxxxxx"> 
-
-            <br><br>
-            
-            <input type="submit" value="Save & Submit">            
-
-          </form>
-        </div>   
-      </div>
-    </div>
+  </div>
   </div>
 
 <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
@@ -236,6 +188,6 @@
     });
   });
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 </body>
 </html>
