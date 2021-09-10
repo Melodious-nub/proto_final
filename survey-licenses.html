@@ -51,7 +51,7 @@
       padding: 20px;
     }
 
-    
+
     
     .col-25 {
       float: left;
@@ -64,6 +64,29 @@
       width: 75%;
       margin-top: 6px;
     }
+
+    #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      #customers td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      
+      #customers tr:nth-child(even){background-color: #f2f2f2;}
+      
+      #customers tr:hover {background-color: #ddd;}
+      
+      #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #2e4ead;
+        color: white;
+      }
     
     /* Clear floats after the columns */
     .row:after {
@@ -138,40 +161,68 @@
       <div class="form-group">
         <div>
           <form>
-            <h3 style="text-align: center;">Status</h3>
-            <div class="radio-container">
-                <input type="radio" id="owned" name="status">
-                <label for="owned"> Owned</label>
-            </div>
-            <div class="radio-container">
-              <input type="radio" id="rented" name="status">
-              <label for="rented"> Rented</label>
-          </div>
+            <h3>Licenses:</h3>
 
-            <label for="floor">Number of Floor:</label>
-            <input type="number" id="lname" name="floor" placeholder="Floor number..">
- 
-            <label for="floor">Number of used Floor:</label>
-            <input type="number" id="lname" name="floor_used" placeholder="Used floor Number..">
+            <table id="customers">
+                <tr>
+                  <th>No.</th>
+                  <th>Types Of Licences</th>
+                  <th>Expired Date</th>
+                  <th>Licence File</th>
+                </tr>
 
-            <label for="floor">Total Floor Area:(square feet)</label>
-            <input type="number" id="lname" name="floor_area" placeholder="Floor area..">            
+                <tr>
+                  <td>1.</td>
+                  <td>General Licences</td>
+                  <td><input type="date" id="date" name="genral_exp"> </td>
+                  <td><input type="file" id="myfile" name="general_licence"> </td>
+                </tr>
 
-            <label for="floor">Height:</label>
-            <input type="number" id="lname" name="lastname" placeholder="Height..">
-            <br><br>          
-            <input type="submit" value="Save & Submit">
+                <tr>
+                    <td>2.</td>
+                    <td>Fire Licence</td>
+                    <td><input type="date" id="date" name="fire_exp"> </td>
+                    <td><input type="file" id="myfile" name="fire_licence"> </td>
+                </tr>
+                  
+                <tr>
+                    <td>3.</td>
+                    <td>Building/Floor Approval</td>
+                    <td><input type="date" id="date" name="floor_exp"> </td>
+                    <td><input type="file" id="myfile" name="floor_licence"> </td>
+                </tr>
+                
+                <tr>
+                    <td>4.</td>
+                    <td>Trade Licence</td>
+                    <td><input type="date" id="date" name="trade_exp"> </td>
+                    <td><input type="file" id="myfile" name="trade_licence"> </td>
+                </tr>
+                
+                <tr>
+                    <td>5.</td>
+                    <td>Boiler Operating Licence</td>
+                    <td><input type="date" id="date" name="boiler_exp"> </td>
+                    <td><input type="file" id="myfile" name="boiler_licence"> </td>
+                </tr>
+                
+                <tr>
+                    <td>6.</td>
+                    <td>Environmental Clearance</td>
+                    <td><input type="date" id="date" name="environmental_exp"> </td>
+                    <td><input type="file" id="myfile" name="environmental_licence"> </td>
+                </tr>                
+
+              </table>
+
+            <br>          
+            <input type="submit" value="Save & Next">
             
           </form>
         </div>
     </div>
   </div>
-         
-    <div class="item">
-      <div class="form-group">
 
-    </div>      
-  </div>
   </div>
 
 <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
