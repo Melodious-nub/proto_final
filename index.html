@@ -10,7 +10,8 @@
     <meta content="Mannatthemes" name="author">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="assets/images/favicon.ico">
-    <link href="assets/plugins/morris/morris.css" rel="stylesheet">
+    <!--Chartist Chart CSS -->
+    <link rel="stylesheet" href="assets/plugins/chartist/css/chartist.min.css">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
@@ -165,32 +166,51 @@ body {font-family: Arial, Helvetica, sans-serif;}
         </div><!-- end navbar-custom -->
     </header><!-- End Navigation Bar-->
     <div class="wrapper">
-        <div class="container-fluid"><br>
+        <div class="container-fluid">
+          <!-- Page-Title -->
+              <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <div class="btn-group pull-right">
+                            <ol class="breadcrumb hide-phone p-0 m-0">
+                                <li class="breadcrumb-item"><a href="#">STS</a></li>
+                                <li class="breadcrumb-item"><a href="#">Charts</a></li>
+                                <li class="breadcrumb-item active">Chartist</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">Chartist Chart</h4>
+                    </div>
+                </div>
+            </div><!-- end page title end breadcrumb -->
+            <!-- Charts -->
             <div class="row">
-                <div class="col-md-6">
-                    <div class="card m-b-30 card-body">
-                        <h1 class="card-title font-20 mt-">News Letter</h1>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content. Loren ipsum balsdgdj basddhgdaksdfsz cnsdhdfd sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yA</p>
-                        <a href="#" class="btn btn-primary waves-effect waves-light">Go somewhere</a>
+                <div class="col-lg-6">
+                    <div class="card m-b-30">
+                        <div class="card-body">
+                            <h4 class="mt-0 header-title">Animating a Donut with Svg.animate</h4>
+                            <p class="text-muted m-b-30 font-14 d-inline-block text-truncate w-100">Although it'd be
+                                also possible to achieve this animation with CSS, with some minor suboptimal things,
+                                here's an example of how to animate donut charts using Chartist.Svg.animate and SMIL.
+                            </p>
+                            <div id="animating-donut" class="ct-chart ct-golden-section"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card m-b-30 card-body">
-                        <h1 class="card-title font-20 mt-0">Manual</h1>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary waves-effect waves-light">Go somewhere</a>
+                </div><!-- end col -->                
+                <div class="col-lg-6">
+                    <div class="card m-b-30">
+                        <div class="card-body">
+                            <h4 class="mt-0 header-title">Stacked bar chart</h4>
+                            <p class="text-muted m-b-30 font-14 d-inline-block text-truncate w-100">You can also set
+                                your bar chart to stack the series bars on top of each other easily by using the
+                                stackBars property in your configuration.</p>
+                            <div id="stacked-bar-chart" class="ct-chart ct-golden-section"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="card m-b-30 card-body">
-                        <h3 class="card-title font-20 mt-0">Terms & Conditions</h3>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary waves-effect waves-light">Go somewhere</a>
-                    </div>
-                </div>                
-            </div><!-- end row -->            
+                </div><!-- end col -->
+            </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end wrapper -->
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="container-fluid">
@@ -213,43 +233,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
     <script src="assets/plugins/morris/morris.min.js"></script>
     <script src="assets/pages/dashborad.js"></script><!-- App js -->
     <script src="assets/js/app.js"></script>
-    <script>
-        /* BEGIN SVG WEATHER ICON */
-        if (typeof Skycons !== 'undefined') {
-            var icons = new Skycons({
-                    "color": "#fff"
-                }, {
-                    "resizeClear": true
-                }),
-                list = [
-                    "clear-day", "clear-night", "partly-cloudy-day",
-                    "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
-                    "fog"
-                ],
-                i;
-
-            for (i = list.length; i--;)
-                icons.set(list[i], list[i]);
-            icons.play();
-        };
-
-        // scroll
-
-        $(document).ready(function () {
-
-            $("#boxscroll").niceScroll({
-                cursorborder: "",
-                cursorcolor: "#cecece",
-                boxzoom: true
-            });
-            $("#boxscroll2").niceScroll({
-                cursorborder: "",
-                cursorcolor: "#cecece",
-                boxzoom: true
-            });
-
-        });
-    </script>
+    
+        <!--Chartist Chart-->
+        <script src="assets/plugins/chartist/js/chartist.min.js"></script>
+         <script src="assets/plugins/chartist/js/chartist-plugin-tooltip.min.js"></script>
+        <script src="assets/pages/chartist.init.js"></script><!-- App js -->
+        <script src="assets/js/app.js"></script>
 </body>
 
 </html>
