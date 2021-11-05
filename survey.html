@@ -1,224 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Responsive Side Navigation Bar</title>
-	<link rel="stylesheet" href="./styles.css">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    
-    input[type=text], select, textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      resize: vertical;
-    }
-    
-    label {
-      padding: 12px 12px 12px 0;
-      display: inline-block;
-    }
-    
-    input[type=submit] {
-      background-color: #4CAF50;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      float: center;
-      width: 35%;
-    }
-    
-    input[type=submit]:hover {
-      background-color: #45a049;
-    }
-    
-    .container {
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      padding: 20px;
-    }
-    
-    .col-25 {
-      float: left;
-      width: 25%;
-      margin-top: 6px;
-    }
-    
-    .col-75 {
-      float: left;
-      width: 75%;
-      margin-top: 6px;
-    }
-    
-    /* Clear floats after the columns */
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    
-    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
-      .col-25, .col-75, input[type=submit] {
-        width: 100%;
-        margin-top: 0;
-      }
-    }
+    <meta charset="UTF-8">
+    <title>Responsive Side Navigation Bar</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+        
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: center;
+            width: 35%;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+        
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width: 600px) {
+            .col-25,
+            .col-75,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-<div class="wrapper">
-  <div class="top_navbar">
-    <div class="hamburger">
-       <div class="one"></div>
-       <div class="two"></div>
-       <div class="three"></div>
-    </div>
-    <div class="top_menu">
-      <div class="logo"><img src="./img/logo.png" height="50"></div>
-      <ul>
-        <li><a href="#">
-          <i class="fas fa-search"></i></a></li>
-        <li><a href="#">
-          <i class="fas fa-bell"></i>
-          </a></li>
-        <li><a href="#">
-          <i class="fas fa-user"></i>
-          </a></li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="sidebar">
-      <ul>
-        <li><a href="#" class="active">
-          <span class="icon"><i class="fas fa-book"></i></span>
-          <span class="title">General</span></a></li>
-        <li><a href="#">
-          <span class="icon"><i class="fas fa-file-video"></i></span>
-          <span class="title">Site</span>
-          </a></li>
-        <li><a href="#">
-          <span class="icon"><i class="fas fa-volleyball-ball"></i></span>
-          <span class="title">HR</span>
-          </a></li>
-        <li><a href="#">
-          <span class="icon"><i class="fas fa-blog"></i></span>
-          <span class="title">Licences</span>
-          </a></li>
-        <li><a href="#">
-          <span class="icon"><i class="fas fa-fire"></i></span>
-          <span class="title">Fire Safety</span>
-          </a></li>
-          <li><a href="#">
-            <span class="icon"><i class="fas fa-bolt"></i></span>
-            <span class="title">Electrical Safety</span>
-            </a></li>          
-    </ul>
-  </div>
-  <div class="main_container">
-    <div class="item">
-      <div class="form-group">
-        <div>
-          <form>
-            <label for="country">Years of Data</label>
-            <select id="country" name="country">
+    <div class="wrapper">
+        <div class="top_navbar">
+            <div class="hamburger">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+            <div class="top_menu">
+                <div class="logo"><img src="./img/logo.png" height="50"></div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-search"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-bell"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon"><i class="fas fa-book"></i></span>
+                        <span class="title">General</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-file-video"></i></span>
+                        <span class="title">Site</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-volleyball-ball"></i></span>
+                        <span class="title">HR</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-blog"></i></span>
+                        <span class="title">Licences</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-fire"></i></span>
+                        <span class="title">Fire Safety</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-bolt"></i></span>
+                        <span class="title">Electrical Safety</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main_container">
+            <div class="item">
+                <div class="form-group">
+                    <div>
+                        <form>
+                            <label for="country">Years of Data</label>
+                            <select id="country" name="country">
               <option value="2021">2021</option>
             </select>
 
-            <label for="fname">Type Of Company</label>
-            <input type="text" id="fname" name="firstname" placeholder="Type of Your company..">
-        
-            <label for="lname">Name Of Company</label>
-            <input type="text" id="lname" name="lastname" placeholder="Name of your company..">
+                            <label for="fname">Type Of Company</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Type of Your company..">
 
-            <label for="lname">Name Of Branch</label>
-            <input type="text" id="lname" name="lastname" placeholder="Name of your branch..">
+                            <label for="lname">Name Of Company</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Name of your company..">
 
-            <div class="form-group col-md-2">
-              <label for="inputZip">Branch Code</label>
-              <input type="text" class="form-control" id="inputZip">
+                            <label for="lname">Name Of Branch</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Name of your branch..">
+
+                            <div class="form-group col-md-2">
+                                <label for="inputZip">Branch Code</label>
+                                <input type="text" class="form-control" id="inputZip">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
             </div>
-        
-          </form>
+
+            <div class="item">
+                <div class="form-group">
+                    <div>
+                        <form>
+
+                            <label for="fname">Year Of Establistment</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Establistment Year..">
+
+                            <label for="lname">Contact Person</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Contact Number..">
+
+                            <div class="form-group">
+                                <label for="inputAddress">Address</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main Dhaka">
+                            </div>
+
+                            <label for="lname">GPS Cordinate</label>
+                            <input type="text" id="lname" name="lastname" placeholder="latitude,longitude">
+
+                            <div class="form-group">
+                                <label for="inputCity">City</label>
+                                <input type="text" class="form-control" id="inputCity" placeholder="City name..">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputCountry">Country</label>
+                                <input type="text" class="form-control" id="inputCountry" placeholder="Country name..">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div><br><br>
+
+            <div class="item">
+                <div class="form-group">
+                    <div>
+                        <form>
+
+                            <label for="fname">Email</label>
+                            <input type="text" id="fname" name="firstname" placeholder="abcd@something.com">
+
+                            <label for="fname">Website</label>
+                            <input type="text" id="fname" name="firstname" placeholder="www.something.com">
+
+                            <label for="fname">Contact Number</label>
+                            <input type="text" id="fname" name="firstname" placeholder="8801xxxxxxx">
+
+                            <br><br>
+
+                            <input type="submit" value="Save & Submit">
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-  </div>
-         
-    <div class="item">
-      <div class="form-group">
-        <div>
-          <form>
 
-            <label for="fname">Year Of Establistment</label>
-            <input type="text" id="fname" name="firstname" placeholder="Establistment Year..">
-        
-            <label for="lname">Contact Person</label>
-            <input type="text" id="lname" name="lastname" placeholder="Contact Number..">
-
-            <div class="form-group">
-              <label for="inputAddress">Address</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main Dhaka">
-            </div>
-
-            <label for="lname">GPS Cordinate</label>
-            <input type="text" id="lname" name="lastname" placeholder="latitude,longitude">
-
-            <div class="form-group">
-              <label for="inputCity">City</label>
-              <input type="text" class="form-control" id="inputCity" placeholder="City name..">
-            </div>
-
-            <div class="form-group">
-              <label for="inputCountry">Country</label>
-              <input type="text" class="form-control" id="inputCountry" placeholder="Country name..">
-            </div>     
-        
-          </form>
-        </div>
-    </div>      
-  </div><br><br>
-    
-    <div class="item">
-      <div class="form-group">
-        <div>
-          <form>
-
-            <label for="fname">Email</label>
-            <input type="text" id="fname" name="firstname" placeholder="abcd@something.com">
-
-            <label for="fname">Website</label>
-            <input type="text" id="fname" name="firstname" placeholder="www.something.com">
-            
-            <label for="fname">Contact Number</label>
-            <input type="text" id="fname" name="firstname" placeholder="8801xxxxxxx"> 
-
-            <br><br>
-            
-            <input type="submit" value="Save & Submit">
-            
-
-          </form>
-        </div>   
-      </div>
-    </div>
-  </div>
-
-<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script>
-  $(document).ready(function(){
-    $(".hamburger").click(function(){
-       $(".wrapper").toggleClass("collapse");
-    });
-  });
-</script>
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".hamburger").click(function() {
+                    $(".wrapper").toggleClass("collapse");
+                });
+            });
+        </script>
 
 </body>
+
 </html>
