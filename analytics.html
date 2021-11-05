@@ -214,12 +214,24 @@
                     </div>
                 </div>
                 <!-- end col -->
+                <!-- Column Chart -->
                 <div class="col-lg-6">
                     <div class="card m-b-30">
-                        <div class="card-body">
+                        <div class="card-body" style="height: 427px; width: 466px;">
                             <h4 class="mt-0 header-title">Stacked bar chart</h4>
                             <p class="text-muted m-b-30 font-14 d-inline-block text-truncate w-100">You can also set your bar chart to stack the series bars on top of each other easily by using the stackBars property in your configuration.</p>
-                            <div id="stacked-bar-chart" class="ct-chart ct-golden-section"></div>
+                            <div id="chart_div" style="width: 450px; height: 300px; padding-left: 50px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end col -->
+                <!-- Chart Map -->
+                <div class="col-lg-12">
+                    <div class="card m-b-30">
+                        <div class="card-body">
+                            <h4 class="mt-0 header-title">Map</h4>
+                            <p class="text-muted m-b-30 font-14 d-inline-block text-truncate w-100">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, assumenda!</p>
+                            <div id="map_div"></div>
                         </div>
                     </div>
                 </div>
@@ -260,8 +272,36 @@
     <script src="assets/plugins/chartist/js/chartist.min.js"></script>
     <script src="assets/plugins/chartist/js/chartist-plugin-tooltip.min.js"></script>
     <script src="assets/pages/chartist.init.js"></script>
-    <!-- App js -->
-    <script src="assets/js/app.js"></script>
+
+    <!-- Google Charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", {
+            "packages": ["map"],
+            // Note: you will need to get a mapsApiKey for your project.
+            // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+            "mapsApiKey": "AIzaSyBuoRtvXLqoHrqIqjs3aKoWOd06Jzr_iwA"
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Lat', 'Long', 'Name'],
+                [23.7768529, 90.41956617976984, 'Branch1'],
+                [24.3715513, 88.5921038, 'Branch2'],
+                [24.2507461, 89.9151479, 'Branch3'],
+                [24.7482129, 90.4099158, 'Branch3']
+            ]);
+
+            var map = new google.visualization.Map(document.getElementById('map_div'));
+            map.draw(data, {
+                showTooltip: true,
+                showInfoWindow: true
+            });
+        }
+    </script>
+    <script src="resource/chart-edit.js"></script>
+
 </body>
 
 </html>
