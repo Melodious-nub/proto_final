@@ -15,11 +15,12 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-    <!-- Moris chart -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
     <!-- Font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <!-- Faq Cdn -->
+    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+    <link rel="stylesheet" href="./resource/faq.css">
     <style>
         * {
             box-sizing: border-box
@@ -170,8 +171,8 @@
                     <div class="navbar">
                         <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
                         <a href="survey.html"><i class="fa fa-list-alt"></i> Survey</a>
-                        <a class="active" href="#"><i class="fa fa-fw fa-envelope"></i> Dashboard</a>
-                        <a href="faq.html"><i class="fa fa-fw fa-user"></i> FAQ</a>
+                        <a href="analytics.html"><i class="fa fa-fw fa-envelope"></i> Dashboard</a>
+                        <a class="active" href="#"><i class="fa fa-fw fa-user"></i> FAQ</a>
                     </div>
                     <!-- End navigation menu -->
                 </div>
@@ -184,78 +185,45 @@
     <!-- End Navigation Bar-->
     <div class="wrapper">
         <div class="container-fluid">
-            <!-- Page-Title -->
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="page-title-box">
-                        <div class="btn-group pull-right">
-                            <ol class="breadcrumb hide-phone p-0 m-0">
-                                <li class="breadcrumb-item"><a href="#">STS</a></li>
-                                <li class="breadcrumb-item"><a href="#">Charts</a></li>
-                                <li class="breadcrumb-item active">Chartist</li>
-                            </ol>
-                        </div>
-                        <h4 class="page-title">Chartist Chart</h4>
-                    </div>
-                </div>
-            </div>
-            <!-- end page title end breadcrumb -->
+            <!-- FAQ -->
 
-            <!-- Charts -->
+            <div class="container" style="margin: 5px 250px;">
 
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="card m-b-30">
-                        <div class="card-body">
-                            <h4 class="mt-0 header-title"><strong>Info About Survey Completion</strong></h4>
-                            <p class="text-muted m-b-30 font-14 d-inline-block text-truncate w-100">Hover Over The Donut Chart For Details</p>
-                            <div id="donut-example" style="width: 450px; height: 300px; padding-left: 50px;"></div>
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <a>What can JavaScript Do?</a>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <a>How JavaScript Can Modify HTML and CSS Values?</a>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <a>What Is SVG?</a>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <a>Is FAQ Section Matters In Website?</a>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <a>How To Create a Light FAQ Element?</a>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
                         </div>
                     </div>
                 </div>
-                <!-- end col -->
-                <!-- Column Chart -->
-                <div class="col-lg-6">
-                    <div class="card m-b-30">
-                        <div class="card-body" style="height: 427px; width: 466px;">
-                            <h4 class="mt-0 header-title"><strong>Floor Area Of Branches</strong></h4>
-                            <p class="text-muted m-b-30 font-14 d-inline-block text-truncate w-100">X-Axis: Branches & Y-Axis*100: Floor Area</p>
-                            <div id="bar-example" style="width: 450px; height: 300px; padding-left: 50px;"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end col -->
-                <div class="col-lg-6">
-                    <div class="card m-b-30">
-                        <div class="card-body" style="height: 427px; width: 466px;">
-                            <h4 class="mt-0 header-title"><strong>Number Of Employees</strong></h4>
-                            <p class="text-muted m-b-30 font-14 d-inline-block text-truncate w-100">X-Axis: Branches & Y-Axis*100: Employee No.</p>
-                            <div id="bar-example2" style="width: 450px; height: 300px; padding-left: 50px;"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end col -->
-                <div class="col-lg-6">
-                    <div class="card m-b-30">
-                        <div class="card-body" style="height: 427px; width: 466px;">
-                            <h4 class="mt-0 header-title"><strong>Demo Pi-Chart</strong></h4>
-                            <p class="text-muted m-b-30 font-14 d-inline-block text-truncate w-100">Lorem, ipsum dolor.</p>
-                            <div id="piechart_3d" style="width: 450px; height: 300px; padding-left: 50px;"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end col -->
-                <!-- Chart Map -->
-                <div class="col-lg-12">
-                    <div class="card m-b-30">
-                        <div class="card-body">
-                            <h4 class="mt-0 header-title">Map</h4>
-                            <p class="text-muted m-b-30 font-14 d-inline-block text-truncate w-100">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, assumenda!</p>
-                            <div id="map_div"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end col -->
+
             </div>
             <!-- end row -->
         </div>
@@ -288,44 +256,20 @@
     <!-- App js -->
     <script src="assets/js/app.js"></script>
 
-    <!--Chartist Chart-->
-    <script src="assets/plugins/chartist/js/chartist.min.js"></script>
-    <script src="assets/plugins/chartist/js/chartist-plugin-tooltip.min.js"></script>
-    <script src="assets/pages/chartist.init.js"></script>
-    <!-- Moris Chart -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+    <script src="function.js"></script>
 
+    <script>
+        const items = document.querySelectorAll(".accordion a");
 
-    <!-- Google Charts -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load("current", {
-            "packages": ["map"],
-            // Note: you will need to get a mapsApiKey for your project.
-            // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
-            "mapsApiKey": "AIzaSyBuoRtvXLqoHrqIqjs3aKoWOd06Jzr_iwA"
-        });
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                ['Lat', 'Long', 'Name'],
-                [23.7768529, 90.41956617976984, 'Branch1'],
-                [24.3715513, 88.5921038, 'Branch2'],
-                [24.2507461, 89.9151479, 'Branch3'],
-                [24.7482129, 90.4099158, 'Branch3']
-            ]);
-
-            var map = new google.visualization.Map(document.getElementById('map_div'));
-            map.draw(data, {
-                showTooltip: true,
-                showInfoWindow: true
-            });
+        function toggleAccordion() {
+            this.classList.toggle('active');
+            this.nextElementSibling.classList.toggle('active');
         }
+
+        items.forEach(item => item.addEventListener('click', toggleAccordion));
     </script>
-    <script src="resource/chart-edit.js"></script>
+
 
 </body>
 
