@@ -1,44 +1,26 @@
-// column Chart- 1
+// Moris Chart
 
-google.charts.load('current', { packages: ['corechart', 'bar'] });
-google.charts.setOnLoadCallback(drawBasic);
+Morris.Bar({
+    element: 'bar-example',
+    data: [
+        { y: 'A', a: 100 },
+        { y: 'B', a: 75 },
+        { y: 'C', a: 50 },
+        { y: 'D', a: 75 },
+        { y: 'E', a: 50 }
+    ],
+    xkey: ['y'],
+    ykeys: ['a'],
+    labels: ['']
+});
 
-function drawBasic() {
-
-    var data = new google.visualization.DataTable();
-    data.addColumn('timeofday', 'Time of Day');
-    data.addColumn('number', 'Motivation Level');
-
-    data.addRows([
-        [{ v: [8, 0, 0], f: '8 am' }, 1],
-        [{ v: [9, 0, 0], f: '9 am' }, 2],
-        [{ v: [10, 0, 0], f: '10 am' }, 3],
-        [{ v: [11, 0, 0], f: '11 am' }, 4],
-        [{ v: [12, 0, 0], f: '12 pm' }, 5],
-        [{ v: [13, 0, 0], f: '1 pm' }, 6],
-        [{ v: [14, 0, 0], f: '2 pm' }, 7],
-        [{ v: [15, 0, 0], f: '3 pm' }, 8],
-        [{ v: [16, 0, 0], f: '4 pm' }, 9],
-        [{ v: [17, 0, 0], f: '5 pm' }, 10],
-    ]);
-
-    var options = {
-        title: 'Motivation Level Throughout the Day',
-        hAxis: {
-            title: 'Branch Name',
-            format: 'h:mm a',
-            viewWindow: {
-                min: [7, 30, 0],
-                max: [17, 30, 0]
-            }
-        },
-        vAxis: {
-            title: 'Floor Area'
-        }
-    };
-
-    var chart = new google.visualization.ColumnChart(
-        document.getElementById('chart_div'));
-
-    chart.draw(data, options);
-}
+// Moris Donut
+Morris.Donut({
+    element: 'donut-example',
+    data: [
+        { label: "Not Started", value: 2 },
+        { label: "Ongoing", value: 1 },
+        { label: "Fnished", value: 2 }
+    ],
+    colors: ['#ff0000', '#ffa500', '#ee82ee']
+});

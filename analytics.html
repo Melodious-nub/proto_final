@@ -15,6 +15,8 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <!-- Moris chart -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
     <!-- Font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
@@ -36,7 +38,7 @@
         .navbar a {
             float: left;
             padding: 12px;
-            color: white;
+            color: rgb(185, 184, 184);
             text-decoration: none;
             font-size: 17px;
             width: 25%;
@@ -45,11 +47,11 @@
         }
         
         .navbar a:hover {
-            background-color: #000;
+            color: white;
         }
         
         .navbar a.active {
-            background-color: #1808f8;
+            color: white;
         }
         
         @media screen and (max-width: 500px) {
@@ -61,7 +63,6 @@
             }
         }
     </style>
-
 </head>
 
 <body>
@@ -82,7 +83,7 @@
                     <!--Annex-->
                     <!--</a>-->
                     <!-- Image Logo -->
-                    <a href="index.html" class="logo"><img src="assets/images/logo-sm.png" alt="" height="22" class="logo-small"> <img src="assets/images/logo.png" alt="" height="35" class="logo-large"></a>
+                    <a href="index.html" class="logo"><img src="assets/images/logo-sm.png" alt="" height="22" class="logo-small"> <img src="assets/images/logo.png" alt="" height="40" width="120" class="logo-large"></a>
                 </div>
                 <!-- End Logo container-->
                 <div class="menu-extras topbar-custom">
@@ -168,7 +169,7 @@
                     <!-- Navigation Menu-->
                     <div class="navbar">
                         <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
-                        <a href="survey.html"><i class="fas fa-poll"></i> Survey</a>
+                        <a href="survey.html"><i class="fa fa-list-alt"></i> Survey</a>
                         <a class="active" href="#"><i class="fa fa-fw fa-envelope"></i> Analytics</a>
                         <a href="#"><i class="fa fa-fw fa-user"></i> FAQ</a>
                     </div>
@@ -209,7 +210,7 @@
                             <h4 class="mt-0 header-title">Animating a Donut with Svg.animate</h4>
                             <p class="text-muted m-b-30 font-14 d-inline-block text-truncate w-100">Although it'd be also possible to achieve this animation with CSS, with some minor suboptimal things, here's an example of how to animate donut charts using Chartist.Svg.animate and SMIL.
                             </p>
-                            <div id="animating-donut" class="ct-chart ct-golden-section"></div>
+                            <div id="donut-example" style="width: 450px; height: 300px; padding-left: 50px;"></div>
                         </div>
                     </div>
                 </div>
@@ -220,7 +221,7 @@
                         <div class="card-body" style="height: 427px; width: 466px;">
                             <h4 class="mt-0 header-title">Stacked bar chart</h4>
                             <p class="text-muted m-b-30 font-14 d-inline-block text-truncate w-100">You can also set your bar chart to stack the series bars on top of each other easily by using the stackBars property in your configuration.</p>
-                            <div id="chart_div" style="width: 450px; height: 300px; padding-left: 50px;"></div>
+                            <div id="bar-example" style="width: 450px; height: 300px; padding-left: 50px;"></div>
                         </div>
                     </div>
                 </div>
@@ -272,6 +273,11 @@
     <script src="assets/plugins/chartist/js/chartist.min.js"></script>
     <script src="assets/plugins/chartist/js/chartist-plugin-tooltip.min.js"></script>
     <script src="assets/pages/chartist.init.js"></script>
+    <!-- Moris Chart -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
 
     <!-- Google Charts -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
