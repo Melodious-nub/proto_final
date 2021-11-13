@@ -15,6 +15,15 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+    <!-- Aditional & Animation -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.min.css">
+    <link rel="stylesheet" href="assets/css/owl.min.css">
+    <link rel="stylesheet" href="assets/css/slick-slide.min.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
     <!-- Font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
@@ -22,46 +31,14 @@
     <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
     <link rel="stylesheet" href="./resource/faq.css">
     <style>
-        * {
-            box-sizing: border-box
-        }
-        
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: "Rubik", sans-serif;
         }
         
-        .navbar {
-            width: 100%;
-            background-color: #5b6be8;
-            overflow: auto;
-        }
-        
-        .navbar a {
-            float: left;
-            padding: 12px;
-            color: rgb(185, 184, 184);
-            text-decoration: none;
-            font-size: 17px;
-            width: 25%;
-            /* Four links of equal widths */
-            text-align: center;
-        }
-        
-        .navbar a:hover {
-            color: white;
-        }
-        
-        .navbar a.active {
-            color: white;
-        }
-        
-        @media screen and (max-width: 500px) {
-            .navbar a {
-                float: none;
-                display: block;
-                width: 100%;
-                text-align: left;
-            }
+        .navigation-menu {
+            display: flex;
+            justify-content: space-evenly;
+            /* Can be changed in the live sample */
         }
     </style>
 </head>
@@ -91,19 +68,14 @@
                     <ul class="list-inline float-right mb-0">
                         <!-- language-->
                         <li class="list-inline-item dropdown notification-list hide-phone"><a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">English <img
-                                    src="assets/images/flags/us_flag.jpg" class="ml-2" height="16" alt=""></a>
+                                    src="assets/images/flags/us_flag.jpg" class="ml-2" height="25px" width="25px" alt=""></a>
                             <div class="dropdown-menu dropdown-menu-right language-switch">
-                                <a class="dropdown-item" href="#"><img src="assets/images/flags/italy_flag.jpg" alt="" height="16"><span>Italian </span></a>
-                                <a class="dropdown-item" href="#"><img src="assets/images/flags/french_flag.jpg" alt="" height="16"><span>French
-                                    </span></a>
-                                <a class="dropdown-item" href="#"><img src="assets/images/flags/spain_flag.jpg" alt="" height="16"><span>Spanish
-                                    </span></a>
-                                <a class="dropdown-item" href="#"><img src="assets/images/flags/russia_flag.jpg" alt="" height="16"><span>Russian</span></a>
+                                <a class="dropdown-item" href="#"><img src="assets/images/flags/italy_flag.jpg" alt="" height="25px" width="25px"><span>Italian </span></a>
                             </div>
                         </li>
                         <!-- notification-->
                         <li class="list-inline-item dropdown notification-list">
-                            <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false"><img src="img/notification.png" alt=""><span class="badge badge-success noti-icon-badge">21</span></a>
+                            <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false"><img src="img/notification.png" alt=""><span class="badge badge-success noti-icon-badge">3</span></a>
                             <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-menu-lg">
                                 <!-- item-->
                                 <div class="dropdown-item noti-title">
@@ -139,13 +111,8 @@
                                 <div class="dropdown-item noti-title">
                                     <h5>Welcome</h5>
                                 </div><a class="dropdown-item" href="#"><i
-                                        class="mdi mdi-account-circle m-r-5 text-muted"></i> Profile</a> <a class="dropdown-item" href="#"><i class="mdi mdi-wallet m-r-5 text-muted"></i> My
-                                    Wallet</a> <a class="dropdown-item" href="#"><span
-                                        class="badge badge-success float-right">5</span><i
-                                        class="mdi mdi-settings m-r-5 text-muted"></i> Settings</a> <a class="dropdown-item" href="#"><i
-                                        class="mdi mdi-lock-open-outline m-r-5 text-muted"></i> Lock screen</a>
-                                <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i
-                                        class="mdi mdi-logout m-r-5 text-muted"></i> Logout</a>
+                                        class="fas fa-user-circle m-r-5 text-muted"></i> Profile</a> <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Settings</a>
+                                <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
                             </div>
                         </li>
                         <li class="menu-item list-inline-item">
@@ -168,12 +135,23 @@
             <div class="container-fluid">
                 <div id="navigation">
                     <!-- Navigation Menu-->
-                    <div class="navbar">
-                        <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
-                        <a href="survey.html"><i class="fa fa-list-alt"></i> Survey</a>
-                        <a href="analytics.html"><i class="fa fa-fw fa-envelope"></i> Dashboard</a>
-                        <a class="active" href="#"><i class="fa fa-fw fa-user"></i> FAQ</a>
-                    </div>
+                    <ul class="navigation-menu">
+                        <li class="has-submenu">
+                            <a href="#"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                        <li class="has-submenu">
+                            <a href="./survey.html"><i class="fa fa-list-alt"></i> Survey</a>
+                        </li>
+                        <li class="has-submenu">
+                            <a class="active" href="analytics.html"><i class="fa fa-fw fa-envelope"></i> Analytics</a>
+                            <ul class="submenu">
+                                <li><a href="analytics.html">Dashboard</a></li>
+                                <li><a href="result.html">Report</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="faq.html"><i class="fa fa-fw fa-user"></i> FAQ</a>
+                        </li>
+                    </ul>
                     <!-- End navigation menu -->
                 </div>
                 <!-- end #navigation -->
@@ -258,6 +236,18 @@
 
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
     <script src="function.js"></script>
+
+    <!-- New -->
+    <script src="assets/js/imageloded.min.js"></script>
+    <script src="assets/js/counterup.js"></script>
+    <script src="assets/js/waypoint.js"></script>
+    <script src="assets/js/magnific.min.js"></script>
+    <script src="assets/js/nice-select.min.js"></script>
+    <script src="assets/js/ripple.js"></script>
+    <script src="assets/js/owl.min.js"></script>
+    <script src="assets/js/slick-slider.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/fontawesome.min.js"></script>
 
     <script>
         const items = document.querySelectorAll(".accordion a");
