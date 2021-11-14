@@ -16,20 +16,25 @@
     <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min2.css">
     <link rel="stylesheet" href="assets/css/magnific.min.css">
     <link rel="stylesheet" href="assets/css/nice-select.min.css">
     <link rel="stylesheet" href="assets/css/owl.min.css">
     <link rel="stylesheet" href="assets/css/slick-slide.min.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min2.css">
     <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <!-- Font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
 </head>
 <style>
     body {
-        font-family: "Rubik", sans-serif;
+        font-family: "lato", sans-serif;
     }
     
     .navigation-menu {
@@ -40,65 +45,72 @@
 </style>
 
 <body>
-    <!-- Loader -->
-    <div id="preloader">
-        <div id="status">
-            <div class="spinner"></div>
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div id="wave1">
+            </div>
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
         </div>
     </div>
-    <!-- Navigation Bar-->
-    <header id="topnav">
-        <div class="topbar-main">
-            <div class="container-fluid">
-                <!-- Logo container-->
-                <div class="logo">
-                    <!-- Text Logo -->
-                    <!--<a href="index.html" class="logo">-->
-                    <!--Annex-->
-                    <!--</a>-->
-                    <!-- Image Logo -->
-                    <a href="index.html" class="logo"><img src="assets/images/logo-sm.png" alt="" height="22" class="logo-small"> <img src="assets/images/logo.png" alt="" height="40" width="120" class="logo-large"></a>
+    <!-- preloader area end -->
+    <div class="body-overlay" id="body-overlay"></div>
+
+    <!-- search popup area start -->
+    <div class="search-popup" id="search-popup">
+        <form action="index.html" class="search-form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search.....">
+            </div>
+            <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <!-- //. search Popup -->
+    </div>
+    <!-- navbar start -->
+    <header class="navbar-area style-4">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container nav-container">
+                <div class="responsive-mobile-menu">
+                    <button class="menu toggle-btn d-block d-lg-none" data-target="#themefie_main_menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-left"></span>
+                        <span class="icon-right"></span>
+                    </button>
                 </div>
-                <!-- End Logo container-->
-                <div class="menu-extras topbar-custom">
-                    <ul class="list-inline float-right mb-0">
-                        <!-- language-->
-                        <li class="list-inline-item dropdown notification-list hide-phone"><a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">English <img
-                                    src="assets/images/flags/us_flag.jpg" class="ml-2" height="25px" width="25px" alt=""></a>
-                            <div class="dropdown-menu dropdown-menu-right language-switch">
-                                <a class="dropdown-item" href="#"><img src="assets/images/flags/italy_flag.jpg" alt="" height="25px" width="25px"><span>Italian </span></a>
-                            </div>
+                <div class="logo">
+                    <a class="main-logo" href="index.html"><img src="img/logo-not.png" height="120" width="70" alt="img"></a>
+                </div>
+                <div class="nav-right-part nav-right-part-mobile">
+                    <ul>
+                        <li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="themefie_main_menu">
+                    <ul class="navbar-nav menu-open text-end">
+                        <li class="current-menu-item">
+                            <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
                         </li>
-                        <!-- notification-->
-                        <li class="list-inline-item dropdown notification-list">
-                            <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false"><img src="img/notification.png" alt=""><span class="badge badge-success noti-icon-badge">3</span></a>
-                            <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-menu-lg">
-                                <!-- item-->
-                                <div class="dropdown-item noti-title">
-                                    <h5>Notification (3)</h5>
-                                </div>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-success"><i class="fa fa-bell"></i></div>
-                                    <p class="notify-details"><b>Your order is placed</b><small class="text-muted">Dummy
-                                            text of the printing and typesetting industry.</small></p>
-                                </a>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-warning"><i class="mdi mdi-message"></i></div>
-                                    <p class="notify-details"><b>New Message received</b><small class="text-muted">You
-                                            have 87 unread messages</small></p>
-                                </a>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-info"><i class="mdi mdi-martini"></i></div>
-                                    <p class="notify-details"><b>Your item is shipped</b><small class="text-muted">It is
-                                            a long established fact that a reader will</small></p>
-                                </a>
-                                <!-- All--><a href="javascript:void(0);" class="dropdown-item notify-item">View
-                                    All</a>
-                            </div>
+                        <li>
+                            <a href="survey.html"><i class="fa fa-list-alt"></i> Survey</a>
                         </li>
+                        <li class="menu-item-has-children">
+                            <a href="analytics.html"><i class="fa fa-fw fa-envelope"></i> Analytics</a>
+                            <ul class="sub-menu">
+                                <li><a href="analytics.html">Dashboard</a></li>
+                                <li><a href="result.html">Report</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="faq.html"><i class="fa fa-fw fa-user"></i> FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-right-part nav-right-part-desktop">
+                    <ul>
+                        <li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
                         <!-- User-->
                         <li class="list-inline-item dropdown notification-list">
                             <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false"><img src="assets/images/users/avatar-1.png" alt="user" class="rounded-circle"></a>
@@ -120,266 +132,493 @@
                         </li>
                     </ul>
                 </div>
-                <!-- end menu-extras -->
-                <div class="clearfix"></div>
             </div>
-            <!-- end container -->
+        </nav>
+    </header>
+    <!-- navbar end -->
+    <!-- End Navigation Bar-->
+    <!-- Banner Area Start-->
+    <section class="banner-area style-4" style="background-image: url(assets/img/home-4/banner/bg.png);">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-10 align-self-center order-lg-1 order-2">
+                    <div class="banner-inner text-lg-start text-center">
+                        <div class="section-title style-2">
+                            <h4 class="sub-title">A Startup </h4>
+                            <h1 class="title">We Are Software Development Agency</h1>
+                            <p> Development magna aliqua sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut et. Quis suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                            <a class="btn btn-base" href="#">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-8 order-1 order-lg-2">
+                    <div class="thumb text-end">
+                        <img src="assets/img/home-4/banner/1.png" alt="img">
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- end topbar-main -->
-        <!-- MENU Start -->
-        <div class="navbar-custom">
-            <div class="container-fluid">
-                <div id="navigation">
-                    <!-- Navigation Menu-->
-                    <ul class="navigation-menu">
-                        <li class="has-submenu">
-                            <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a></li>
-                        <li class="has-submenu">
-                            <a href="./survey.html"><i class="fa fa-list-alt"></i> Survey</a>
+    </section>
+    <!-- Banner Area End -->
+
+    <!--project-area start-->
+    <section class="project-area pd-top-135 text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section-title text-center">
+                        <h2 class="title">Manual</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="project-tabs">
+                        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Customer Training Manual <span>Basic Knowledge </span></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Video Manual <span>Basic Videos</span></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-developer-tab" data-bs-toggle="pill" data-bs-target="#pills-developer" type="button" role="tab" aria-controls="pills-developer" aria-selected="false">Demo Data Input <span>Data input</span></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-developer-tab" data-bs-toggle="pill" data-bs-target="#pills-developer" type="button" role="tab" aria-controls="pills-developer" aria-selected="false">System Manual <span>System Manual</span></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-developer-tab" data-bs-toggle="pill" data-bs-target="#pills-developer" type="button" role="tab" aria-controls="pills-developer" aria-selected="false">Survey Guideline Manual <span>Survey Guideline </span></button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-developer-tab" data-bs-toggle="pill" data-bs-target="#pills-developer" type="button" role="tab" aria-controls="pills-developer" aria-selected="false">Admin panel Guideline <span>Web portal Manual</span></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="project-tab-content">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/1.png" alt="img">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/2.png" alt="img">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/3.png" alt="img">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/4.png" alt="img">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/3.png" alt="img">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/4.png" alt="img">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/1.png" alt="img">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/2.png" alt="img">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-developer" role="tabpanel" aria-labelledby="pills-developer-tab">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/2.png" alt="img">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/1.png" alt="img">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/3.png" alt="img">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/4.png" alt="img">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-developer" role="tabpanel" aria-labelledby="pills-developer-tab">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/2.png" alt="img">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/1.png" alt="img">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/3.png" alt="img">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/4.png" alt="img">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-developer" role="tabpanel" aria-labelledby="pills-developer-tab">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/2.png" alt="img">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/1.png" alt="img">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/3.png" alt="img">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/4.png" alt="img">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-developer" role="tabpanel" aria-labelledby="pills-developer-tab">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/2.png" alt="img">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/1.png" alt="img">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/3.png" alt="img">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#">
+                                            <img src="assets/img/home-4/project/4.png" alt="img">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--project-area end-->
+
+    <!--testimonial-area start-->
+    <section class="testimonial-area-2 pd-top-110">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-8">
+                    <div class="section-title text-center">
+                        <h2 class="title">Required Documents</h2>
+                        <p class="px-5">List of needed required docs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="testimonial-slider-2">
+                        <div class="slider testimonial-slider-nav">
+                            <div>
+                                <div class="thumb">
+                                    <img src="assets/img/home-2/testimonial/1.jpg" alt="img">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="thumb">
+                                    <img src="assets/img/home-2/testimonial/2.jpg" alt="img">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="thumb">
+                                    <img src="assets/img/home-2/testimonial/3.jpg" alt="img">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="thumb">
+                                    <img src="assets/img/home-2/testimonial/4.jpg" alt="img">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="thumb">
+                                    <img src="assets/img/home-2/testimonial/5.jpg" alt="img">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="thumb">
+                                    <img src="assets/img/home-2/testimonial/3.jpg" alt="img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-9">
+                    <div class="slider testimonial-slider-for">
+                        <div class="testimonial-wrap">
+                            <h6>Building Blueprint</h6>
+                        </div>
+                        <div class="testimonial-wrap">
+                            <h6>Firesfety License</h6>
+                        </div>
+                        <div class="testimonial-wrap">
+                            <h6>Employee Data</h6>
+                        </div>
+                        <div class="testimonial-wrap">
+                            <h6>Site Data</h6>
+                        </div>
+                        <div class="testimonial-wrap">
+                            <h6>Company License</h6>
+                        </div>
+                        <div class="testimonial-wrap">
+                            <h6>Admin Data</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--testimonial-area end-->
+
+    <!-- Cards -->
+
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card" style="border: 1px solid blue; height: 400px;">
+                <div class="card-header" style="background-color: rgb(214, 214, 214);">
+                    <h4 style="text-align: center;font-weight: 600;">News Letter</h4>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <h5><a href="">September</a></h5>
                         </li>
-                        <li class="has-submenu">
-                            <a href="analytics.html"><i class="fa fa-fw fa-envelope"></i> Analytics</a>
-                            <ul class="submenu">
-                                <li><a href="analytics.html">Dashboard</a></li>
-                                <li><a href="result.html">Report</a></li>
-                            </ul>
+                        <li>
+                            <h5><a href="">October</a></h5>
                         </li>
-                        <li class="has-submenu">
-                            <a href="faq.html"><i class="fa fa-fw fa-user"></i> FAQ</a>
+                        <li>
+                            <h5><a href="">November</a></h5>
+                        </li>
+                        <li>
+                            <h5><a href="">December</a></h5>
+                        </li>
+                        <li>
+                            <h5><a href="">January</a></h5>
+                        </li>
+                        <li>
+                            <h5><a href="">February</a></h5>
+                        </li>
+                        <li>
+                            <h5><a href="">March</a></h5>
+                        </li>
+                        <li>
+                            <h5><a href="">April</a></h5>
+                        </li>
+                        <li>
+                            <h5><a href="">May</a></h5>
                         </li>
                     </ul>
-                    <!-- End navigation menu -->
                 </div>
-                <!-- end #navigation -->
             </div>
-            <!-- end container -->
         </div>
-        <!-- end navbar-custom -->
-    </header>
-    <!-- End Navigation Bar-->
-    <div class="wrapper">
-        <div class="container-fluid">
-            <div>
-                <h5 style="text-align: center; padding: 10px; margin-bottom: 8px;background-color: #5b6be8; border-radius: 15px; color: white; margin-bottom: 10px; opacity: 75%;">Sonali Bank Limited, Rampura Branch<br>Shahid Muktijoddha Faruk Ikbal and Taslim Road, Dhaka</h5>
+        <!-- end col -->
+        <div class="col-lg-6 mb-4">
+            <div class="card" style="border: 1px solid blue; height: 400px;">
+                <div class="card-header" style="background-color: rgb(214, 214, 214);">
+                    <h4 style="text-align: center;font-weight: 600;">Manual</h4>
+                </div>
+                <div style="padding-top: 40px;">
+                    <ul>
+                        <li>
+                            <h5><a href="">Customer Training Manual</a></h5>
+                        </li>
+                        <li>
+                            <h5><a href="">Video Link</a></h5>
+                        </li>
+                        <li>
+                            <h5><a href="">Demo Data Input</a></h5>
+                        </li>
+                        <li>
+                            <h5><a href="">System Manual</a></h5>
+                        </li>
+                        <li>
+                            <h5><a href="">Survey Guideline</a></h5>
+                        </li>
+                        <li>
+                            <h5><a href="">Admin panel Guideline</a></h5>
+                        </li>
+                    </ul>
+                </div>
             </div>
-
-            <!-- Banner Area Start-->
-            <section class="banner-area" style="background-image: url(assets/img/banner/1.png);margin: 10px 0px;">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-6 col-md-10 align-self-center">
-                            <div class="banner-inner text-lg-start text-center">
-                                <h1>Download Our App & Enjoy Your Business Plan</h1>
-                                <p class="me-5">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-                                <a class="play-btn pulse" href="https://www.youtube.com/embed/Wimkqo8gDZ0" data-effect="mfp-zoom-in"><span class="play-icon"><i class="fas fa-play"></i></span>Watch Video</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-8">
-                            <div class="thumb text-end">
-                                <img class="animated phone-bounce" src="assets/img/banner/01.png" alt="img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Banner Area End -->
-
-            <!-- Cards -->
-
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="card" style="border: 1px solid blue; height: 400px;">
-                        <div class="card-header" style="background-color: rgb(214, 214, 214);">
-                            <h4 style="text-align: center;font-weight: 600;">News Letter</h4>
-                        </div>
-                        <div>
-                            <ul>
-                                <li>
-                                    <h5><a href="">September</a></h5>
-                                </li>
-                                <li>
-                                    <h5><a href="">October</a></h5>
-                                </li>
-                                <li>
-                                    <h5><a href="">November</a></h5>
-                                </li>
-                                <li>
-                                    <h5><a href="">December</a></h5>
-                                </li>
-                                <li>
-                                    <h5><a href="">January</a></h5>
-                                </li>
-                                <li>
-                                    <h5><a href="">February</a></h5>
-                                </li>
-                                <li>
-                                    <h5><a href="">March</a></h5>
-                                </li>
-                                <li>
-                                    <h5><a href="">April</a></h5>
-                                </li>
-                                <li>
-                                    <h5><a href="">May</a></h5>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- end col -->
-                <div class="col-lg-6 mb-4">
-                    <div class="card" style="border: 1px solid blue; height: 400px;">
-                        <div class="card-header" style="background-color: rgb(214, 214, 214);">
-                            <h4 style="text-align: center;font-weight: 600;">Manual</h4>
-                        </div>
-                        <div style="padding-top: 40px;">
-                            <ul>
-                                <li>
-                                    <h5><a href="">Customer Training Manual</a></h5>
-                                </li>
-                                <li>
-                                    <h5><a href="">Video Link</a></h5>
-                                </li>
-                                <li>
-                                    <h5><a href="">Demo Data Input</a></h5>
-                                </li>
-                                <li>
-                                    <h5><a href="">System Manual</a></h5>
-                                </li>
-                                <li>
-                                    <h5><a href="">Survey Guideline</a></h5>
-                                </li>
-                                <li>
-                                    <h5><a href="">Admin panel Guideline</a></h5>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- end col -->
-                <div class="col-lg-6 mb-4">
-                    <div class="card" style="border: 1px solid blue; height: 400px;">
-                        <div class="card-header" style="background-color: rgb(214, 214, 214);">
-                            <h4 style="text-align: center;font-weight: 600;">Terms and Conditions for STS</h4>
-                        </div>
-                        <div style="padding: 15px; overflow: scroll;">
-                            <h2>Introduction</h2>
-
-                            <p>These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, sts-serve.com accessible at sts-serve.com.</p>
-
-                            <p>These Terms will be applied fully and affect to your use of this Website. By using this Website, you agreed to accept all terms and conditions written in here. You must not use this Website if you disagree with any of these
-                                Website Standard Terms and Conditions. These Terms and Conditions have been generated with the help of the Terms And Conditiions Sample Generator</a>.</p>
-
-                            <p>Minors or people below 18 years old are not allowed to use this Website.</p>
-
-                            <h2>Intellectual Property Rights</h2>
-
-                            <p>Other than the content you own, under these Terms, STS and/or its licensors own all the intellectual property rights and materials contained in this Website.</p>
-
-                            <p>You are granted limited license only for purposes of viewing the material contained on this Website.</p>
-
-                            <h2>Restrictions</h2>
-
-                            <p>You are specifically restricted from all of the following:</p>
-
-                            <ul>
-                                <li>publishing any Website material in any other media;</li>
-                                <li>selling, sublicensing and/or otherwise commercializing any Website material;</li>
-                                <li>publicly performing and/or showing any Website material;</li>
-                                <li>using this Website in any way that is or may be damaging to this Website;</li>
-                                <li>using this Website in any way that impacts user access to this Website;</li>
-                                <li>using this Website contrary to applicable laws and regulations, or in any way may cause harm to the Website, or to any person or business entity;</li>
-                                <li>engaging in any data mining, data harvesting, data extracting or any other similar activity in relation to this Website;</li>
-                                <li>using this Website to engage in any advertising or marketing.</li>
-                            </ul>
-
-                            <p>Certain areas of this Website are restricted from being access by you and STS may further restrict access by you to any areas of this Website, at any time, in absolute discretion. Any user ID and password you may have for this
-                                Website are confidential and you must maintain confidentiality as well.</p>
-
-                            <h2>Your Content</h2>
-
-                            <p>In these Website Standard Terms and Conditions, "Your Content" shall mean any audio, video text, images or other material you choose to display on this Website. By displaying Your Content, you grant STS a non-exclusive, worldwide
-                                irrevocable, sub licensable license to use, reproduce, adapt, publish, translate and distribute it in any and all media.</p>
-
-                            <p>Your Content must be your own and must not be invading any third-party’s rights. STS reserves the right to remove any of Your Content from this Website at any time without notice.</p>
-
-                            <h2>Your Privacy</h2>
-
-                            <p>Please read Privacy Policy.</p>
-
-                            <h2>No warranties</h2>
-
-                            <p>This Website is provided "as is," with all faults, and STS express no representations or warranties, of any kind related to this Website or the materials contained on this Website. Also, nothing contained on this Website shall
-                                be interpreted as advising you.</p>
-
-                            <h2>Limitation of liability</h2>
-
-                            <p>In no event shall STS, nor any of its officers, directors and employees, shall be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract.  STS,
-                                including its officers, directors and employees shall not be held liable for any indirect, consequential or special liability arising out of or in any way related to your use of this Website.</p>
-
-                            <h2>Indemnification</h2>
-
-                            <p>You hereby indemnify to the fullest extent STS from and against any and/or all liabilities, costs, demands, causes of action, damages and expenses arising in any way related to your breach of any of the provisions of these
-                                Terms.
-                            </p>
-
-                            <h2>Severability</h2>
-
-                            <p>If any provision of these Terms is found to be invalid under any applicable law, such provisions shall be deleted without affecting the remaining provisions herein.</p>
-
-                            <h2>Variation of Terms</h2>
-
-                            <p>STS is permitted to revise these Terms at any time as it sees fit, and by using this Website you are expected to review these Terms on a regular basis.</p>
-
-                            <h2>Assignment</h2>
-
-                            <p>The STS is allowed to assign, transfer, and subcontract its rights and/or obligations under these Terms without any notification. However, you are not allowed to assign, transfer, or subcontract any of your rights and/or obligations
-                                under these Terms.</p>
-
-                            <h2>Entire Agreement</h2>
-
-                            <p>These Terms constitute the entire agreement between STS and you in relation to your use of this Website, and supersede all prior agreements and understandings.</p>
-
-                            <h2>Governing Law & Jurisdiction</h2>
-
-                            <p>These Terms will be governed by and interpreted in accordance with the laws of the State of bd, and you submit to the non-exclusive jurisdiction of the state and federal courts located in bd for the resolution of any disputes.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end col -->
-                <div class="col-lg-6 mb-4">
-                    <div class="card" style="border: 1px solid blue; height: 400px;">
-                        <div class="card-header" style="background-color: rgb(214, 214, 214);">
-                            <h4 style="text-align: center;font-weight: 600;">Required Documents</h4>
-                        </div>
-                        <div style="padding-top: 40px;">
-                            <ul>
-                                <li>
-                                    <h5><a href="">Building Blueprint</a></h5>
-                                </li>
-                                <li>
-                                    <h5><a href="">Firesfety License</a></h5>
-                                </li>
-                                <li>
-                                    <h5><a href="">Employee Data</a></h5>
-                                </li>
-                                <li>
-                                    <h5><a href="">Site Data</a></h5>
-                                </li>
-                                <li>
-                                    <h5><a href="">Company License</a></h5>
-                                </li>
-                                <li>
-                                    <h5><a href="">Admin Data</a></h5>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- end col -->
-            </div>
-            <!-- end row -->
         </div>
-        <!-- end container -->
+        <!-- end col -->
+        <div class="col-lg-6 mb-4">
+            <div class="card" style="border: 1px solid blue; height: 400px;">
+                <div class="card-header" style="background-color: rgb(214, 214, 214);">
+                    <h4 style="text-align: center;font-weight: 600;">Terms and Conditions for STS</h4>
+                </div>
+                <div style="padding: 15px; overflow: scroll;">
+                    <h2>Introduction</h2>
+
+                    <p>These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, sts-serve.com accessible at sts-serve.com.</p>
+
+                    <p>These Terms will be applied fully and affect to your use of this Website. By using this Website, you agreed to accept all terms and conditions written in here. You must not use this Website if you disagree with any of these Website
+                        Standard Terms and Conditions. These Terms and Conditions have been generated with the help of the Terms And Conditiions Sample Generator</a>.</p>
+
+                    <p>Minors or people below 18 years old are not allowed to use this Website.</p>
+
+                    <h2>Intellectual Property Rights</h2>
+
+                    <p>Other than the content you own, under these Terms, STS and/or its licensors own all the intellectual property rights and materials contained in this Website.</p>
+
+                    <p>You are granted limited license only for purposes of viewing the material contained on this Website.</p>
+
+                    <h2>Restrictions</h2>
+
+                    <p>You are specifically restricted from all of the following:</p>
+
+                    <ul>
+                        <li>publishing any Website material in any other media;</li>
+                        <li>selling, sublicensing and/or otherwise commercializing any Website material;</li>
+                        <li>publicly performing and/or showing any Website material;</li>
+                        <li>using this Website in any way that is or may be damaging to this Website;</li>
+                        <li>using this Website in any way that impacts user access to this Website;</li>
+                        <li>using this Website contrary to applicable laws and regulations, or in any way may cause harm to the Website, or to any person or business entity;</li>
+                        <li>engaging in any data mining, data harvesting, data extracting or any other similar activity in relation to this Website;</li>
+                        <li>using this Website to engage in any advertising or marketing.</li>
+                    </ul>
+
+                    <p>Certain areas of this Website are restricted from being access by you and STS may further restrict access by you to any areas of this Website, at any time, in absolute discretion. Any user ID and password you may have for this Website
+                        are confidential and you must maintain confidentiality as well.</p>
+
+                    <h2>Your Content</h2>
+
+                    <p>In these Website Standard Terms and Conditions, "Your Content" shall mean any audio, video text, images or other material you choose to display on this Website. By displaying Your Content, you grant STS a non-exclusive, worldwide irrevocable,
+                        sub licensable license to use, reproduce, adapt, publish, translate and distribute it in any and all media.</p>
+
+                    <p>Your Content must be your own and must not be invading any third-party’s rights. STS reserves the right to remove any of Your Content from this Website at any time without notice.</p>
+
+                    <h2>Your Privacy</h2>
+
+                    <p>Please read Privacy Policy.</p>
+
+                    <h2>No warranties</h2>
+
+                    <p>This Website is provided "as is," with all faults, and STS express no representations or warranties, of any kind related to this Website or the materials contained on this Website. Also, nothing contained on this Website shall be interpreted
+                        as advising you.</p>
+
+                    <h2>Limitation of liability</h2>
+
+                    <p>In no event shall STS, nor any of its officers, directors and employees, shall be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract.  STS, including
+                        its officers, directors and employees shall not be held liable for any indirect, consequential or special liability arising out of or in any way related to your use of this Website.</p>
+
+                    <h2>Indemnification</h2>
+
+                    <p>You hereby indemnify to the fullest extent STS from and against any and/or all liabilities, costs, demands, causes of action, damages and expenses arising in any way related to your breach of any of the provisions of these Terms.
+                    </p>
+
+                    <h2>Severability</h2>
+
+                    <p>If any provision of these Terms is found to be invalid under any applicable law, such provisions shall be deleted without affecting the remaining provisions herein.</p>
+
+                    <h2>Variation of Terms</h2>
+
+                    <p>STS is permitted to revise these Terms at any time as it sees fit, and by using this Website you are expected to review these Terms on a regular basis.</p>
+
+                    <h2>Assignment</h2>
+
+                    <p>The STS is allowed to assign, transfer, and subcontract its rights and/or obligations under these Terms without any notification. However, you are not allowed to assign, transfer, or subcontract any of your rights and/or obligations
+                        under these Terms.</p>
+
+                    <h2>Entire Agreement</h2>
+
+                    <p>These Terms constitute the entire agreement between STS and you in relation to your use of this Website, and supersede all prior agreements and understandings.</p>
+
+                    <h2>Governing Law & Jurisdiction</h2>
+
+                    <p>These Terms will be governed by and interpreted in accordance with the laws of the State of bd, and you submit to the non-exclusive jurisdiction of the state and federal courts located in bd for the resolution of any disputes.</p>
+                </div>
+            </div>
+        </div>
+        <!-- end col -->
+        <div class="col-lg-6 mb-4">
+            <div class="card" style="border: 1px solid blue; height: 400px;">
+                <div class="card-header" style="background-color: rgb(214, 214, 214);">
+                    <h4 style="text-align: center;font-weight: 600;">Required Documents</h4>
+                </div>
+                <div style="padding-top: 40px;">
+                    <ul>
+                        <li>
+                            <h5><a href="">Building Blueprint</a></h5>
+                        </li>
+                        <li>
+                            <h5><a href="">Firesfety License</a></h5>
+                        </li>
+                        <li>
+                            <h5><a href="">Employee Data</a></h5>
+                        </li>
+                        <li>
+                            <h5><a href="">Site Data</a></h5>
+                        </li>
+                        <li>
+                            <h5><a href="">Company License</a></h5>
+                        </li>
+                        <li>
+                            <h5><a href="">Admin Data</a></h5>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end col -->
+    </div>
+    <!-- end row -->
     </div>
     <!-- end wrapper -->
 
@@ -407,18 +646,21 @@
     <script src="assets/pages/dashborad.js"></script>
     <!-- App js -->
     <script src="assets/js/app.js"></script>
-    <!-- New -->
+    <!-- all plugins here -->
+    <script src="assets/js/jquery.3.6.min.js"></script>
+    <script src="assets/js/bootstrap.min2.js"></script>
     <script src="assets/js/imageloded.min.js"></script>
     <script src="assets/js/counterup.js"></script>
     <script src="assets/js/waypoint.js"></script>
     <script src="assets/js/magnific.min.js"></script>
     <script src="assets/js/nice-select.min.js"></script>
+    <script src="assets/js/fontawesome.min.js"></script>
     <script src="assets/js/ripple.js"></script>
     <script src="assets/js/owl.min.js"></script>
     <script src="assets/js/slick-slider.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/fontawesome.min.js"></script>
-
+    <!-- main js  -->
+    <script src="assets/js/main2.js"></script>
 </body>
 
 </html>
