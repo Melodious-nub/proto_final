@@ -9,7 +9,8 @@
     <meta content="Admin Dashboard" name="description">
     <meta content="Mannatthemes" name="author">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <!--fivicon icon-->
+    <link rel="icon" href="assets/img/fevicon.png">
     <!--Chartist Chart CSS -->
     <link rel="stylesheet" href="assets/plugins/chartist/css/chartist.min.css">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -27,14 +28,11 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <!-- Moris chart -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
-    <!-- Font awesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: "Rubik", sans-serif;
+            font-family: "lato", sans-serif;
         }
         
         .navigation-menu {
@@ -46,65 +44,72 @@
 </head>
 
 <body>
-    <!-- Loader -->
-    <div id="preloader">
-        <div id="status">
-            <div class="spinner"></div>
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div id="wave1">
+            </div>
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
         </div>
     </div>
-    <!-- Navigation Bar-->
-    <header id="topnav">
-        <div class="topbar-main">
-            <div class="container-fluid">
-                <!-- Logo container-->
-                <div class="logo">
-                    <!-- Text Logo -->
-                    <!--<a href="index.html" class="logo">-->
-                    <!--Annex-->
-                    <!--</a>-->
-                    <!-- Image Logo -->
-                    <a href="index.html" class="logo"><img src="assets/images/logo-sm.png" alt="" height="22" class="logo-small"> <img src="assets/images/logo.png" alt="" height="40" width="120" class="logo-large"></a>
+    <!-- preloader area end -->
+    <div class="body-overlay" id="body-overlay"></div>
+
+    <!-- search popup area start -->
+    <div class="search-popup" id="search-popup">
+        <form action="index.html" class="search-form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search.....">
+            </div>
+            <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <!-- //. search Popup -->
+    </div>
+    <!-- navbar start -->
+    <header class="navbar-area style-4">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container nav-container">
+                <div class="responsive-mobile-menu">
+                    <button class="menu toggle-btn d-block d-lg-none" data-target="#themefie_main_menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-left"></span>
+                        <span class="icon-right"></span>
+                    </button>
                 </div>
-                <!-- End Logo container-->
-                <div class="menu-extras topbar-custom">
-                    <ul class="list-inline float-right mb-0">
-                        <!-- language-->
-                        <li class="list-inline-item dropdown notification-list hide-phone"><a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">English <img
-                                    src="assets/images/flags/us_flag.jpg" class="ml-2" height="25px" width="25px" alt=""></a>
-                            <div class="dropdown-menu dropdown-menu-right language-switch">
-                                <a class="dropdown-item" href="#"><img src="assets/images/flags/italy_flag.jpg" alt="" height="25px" width="25px"><span>Italian </span></a>
-                            </div>
+                <div class="logo">
+                    <a class="main-logo" href="index.html"><img src="img/logo-not.png" height="120" width="70" alt="img"></a>
+                </div>
+                <div class="nav-right-part nav-right-part-mobile">
+                    <ul>
+                        <li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="themefie_main_menu">
+                    <ul class="navbar-nav menu-open text-end">
+                        <li class="current-menu-item">
+                            <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
                         </li>
-                        <!-- notification-->
-                        <li class="list-inline-item dropdown notification-list">
-                            <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false"><img src="img/notification.png" alt=""><span class="badge badge-success noti-icon-badge">3</span></a>
-                            <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-menu-lg">
-                                <!-- item-->
-                                <div class="dropdown-item noti-title">
-                                    <h5>Notification (3)</h5>
-                                </div>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-success"><i class="fa fa-bell"></i></div>
-                                    <p class="notify-details"><b>Your order is placed</b><small class="text-muted">Dummy
-                                            text of the printing and typesetting industry.</small></p>
-                                </a>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-warning"><i class="mdi mdi-message"></i></div>
-                                    <p class="notify-details"><b>New Message received</b><small class="text-muted">You
-                                            have 87 unread messages</small></p>
-                                </a>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-info"><i class="mdi mdi-martini"></i></div>
-                                    <p class="notify-details"><b>Your item is shipped</b><small class="text-muted">It is
-                                            a long established fact that a reader will</small></p>
-                                </a>
-                                <!-- All--><a href="javascript:void(0);" class="dropdown-item notify-item">View
-                                    All</a>
-                            </div>
+                        <li>
+                            <a href="survey.html"><i class="fa fa-list-alt"></i> Survey</a>
                         </li>
+                        <li class="menu-item-has-children">
+                            <a href="analytics.html"><i class="fa fa-fw fa-envelope"></i> Analytics</a>
+                            <ul class="sub-menu">
+                                <li><a href="analytics.html">Dashboard</a></li>
+                                <li><a href="result.html">Report</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="faq.html"><i class="fa fa-fw fa-user"></i> FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-right-part nav-right-part-desktop">
+                    <ul>
+                        <li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
                         <!-- User-->
                         <li class="list-inline-item dropdown notification-list">
                             <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false"><img src="assets/images/users/avatar-1.png" alt="user" class="rounded-circle"></a>
@@ -126,61 +131,31 @@
                         </li>
                     </ul>
                 </div>
-                <!-- end menu-extras -->
-                <div class="clearfix"></div>
             </div>
-            <!-- end container -->
-        </div>
-        <!-- end topbar-main -->
-        <!-- MENU Start -->
-        <div class="navbar-custom">
-            <div class="container-fluid">
-                <div id="navigation">
-                    <!-- Navigation Menu-->
-                    <ul class="navigation-menu">
-                        <li class="has-submenu">
-                            <a href="#"><i class="fa fa-fw fa-home"></i> Home</a></li>
-                        <li class="has-submenu">
-                            <a href="./survey.html"><i class="fa fa-list-alt"></i> Survey</a>
-                        </li>
-                        <li class="has-submenu">
-                            <a class="active" href="analytics.html"><i class="fa fa-fw fa-envelope"></i> Analytics</a>
-                            <ul class="submenu">
-                                <li><a href="analytics.html">Dashboard</a></li>
-                                <li><a href="result.html">Report</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-submenu">
-                            <a href="faq.html"><i class="fa fa-fw fa-user"></i> FAQ</a>
-                        </li>
-                    </ul>
-                    <!-- End navigation menu -->
-                </div>
-                <!-- end #navigation -->
-            </div>
-            <!-- end container -->
-        </div>
-        <!-- end navbar-custom -->
+        </nav>
     </header>
+    <!-- navbar end -->
     <!-- End Navigation Bar-->
-    <div class="wrapper">
-        <div class="container-fluid">
-            <!-- Page-Title -->
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="page-title-box">
-                        <div class="btn-group pull-right">
-                            <ul class="breadcrumb hide-phone p-0 m-0">
-                                <li class="breadcrumb-item"><a href="#">STS</a></li>
-                                <li class="breadcrumb-item"><a href="#">Charts</a></li>
-                                <li class="breadcrumb-item active">Chartist</li>
-                            </ul>
-                        </div>
-                        <h4 class="page-title">Dashboard</h4>
+    <!-- breadcrumb Area Start-->
+    <section class="breadcrumb-area text-center">
+        <!--style-overlay-->
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 align-self-center">
+                    <div class="breadcrumb-inner">
+                        <h1 class="page-title">Dashboard</h1>
+                        <ul class="page-list breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <!-- end page title end breadcrumb -->
+        </div>
+    </section>
+    <!-- breadcrumb Area End -->
+    <div class="wrapper">
+        <div class="container-fluid">
 
             <!-- Charts -->
 
@@ -248,7 +223,7 @@
     <footer class="footer">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12">© 2021 STS by TandovIT</div>
+                <div class="col-12">© 2021 SafeGuard by STS</div>
             </div>
         </div>
     </footer>
@@ -268,17 +243,6 @@
     <script src="assets/pages/dashborad.js"></script>
     <!-- App js -->
     <script src="assets/js/app.js"></script>
-    <!-- New -->
-    <script src="assets/js/imageloded.min.js"></script>
-    <script src="assets/js/counterup.js"></script>
-    <script src="assets/js/waypoint.js"></script>
-    <script src="assets/js/magnific.min.js"></script>
-    <script src="assets/js/nice-select.min.js"></script>
-    <script src="assets/js/ripple.js"></script>
-    <script src="assets/js/owl.min.js"></script>
-    <script src="assets/js/slick-slider.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/fontawesome.min.js"></script>
 
     <!--Chartist Chart-->
     <script src="assets/plugins/chartist/js/chartist.min.js"></script>
