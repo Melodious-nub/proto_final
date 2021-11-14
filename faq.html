@@ -15,122 +15,100 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-    <!-- Font awesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <!-- Faq Cdn -->
-    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
-    <link rel="stylesheet" href="./resource/faq.css">
+
+    <!-- Aditional & Animation -->
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min2.css">
+    <link rel="stylesheet" href="assets/css/magnific.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.min.css">
+    <link rel="stylesheet" href="assets/css/owl.min.css">
+    <link rel="stylesheet" href="assets/css/slick-slide.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min2.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <style>
-        * {
-            box-sizing: border-box
-        }
-        
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: "lato", sans-serif;
         }
         
-        .navbar {
-            width: 100%;
-            background-color: #5b6be8;
-            overflow: auto;
-        }
-        
-        .navbar a {
-            float: left;
-            padding: 12px;
-            color: rgb(185, 184, 184);
-            text-decoration: none;
-            font-size: 17px;
-            width: 25%;
-            /* Four links of equal widths */
-            text-align: center;
-        }
-        
-        .navbar a:hover {
-            color: white;
-        }
-        
-        .navbar a.active {
-            color: white;
-        }
-        
-        @media screen and (max-width: 500px) {
-            .navbar a {
-                float: none;
-                display: block;
-                width: 100%;
-                text-align: left;
-            }
+        .navigation-menu {
+            display: flex;
+            justify-content: space-evenly;
+            /* Can be changed in the live sample */
         }
     </style>
 </head>
 
 <body>
-    <!-- Loader -->
-    <div id="preloader">
-        <div id="status">
-            <div class="spinner"></div>
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div id="wave1">
+            </div>
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
         </div>
     </div>
-    <!-- Navigation Bar-->
-    <header id="topnav">
-        <div class="topbar-main">
-            <div class="container-fluid">
-                <!-- Logo container-->
-                <div class="logo">
-                    <!-- Text Logo -->
-                    <!--<a href="index.html" class="logo">-->
-                    <!--Annex-->
-                    <!--</a>-->
-                    <!-- Image Logo -->
-                    <a href="index.html" class="logo"><img src="assets/images/logo-sm.png" alt="" height="22" class="logo-small"> <img src="assets/images/logo.png" alt="" height="40" width="120" class="logo-large"></a>
+    <!-- preloader area end -->
+    <div class="body-overlay" id="body-overlay"></div>
+
+    <!-- search popup area start -->
+    <div class="search-popup" id="search-popup">
+        <form action="index.html" class="search-form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search.....">
+            </div>
+            <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <!-- //. search Popup -->
+    </div>
+    <!-- navbar start -->
+    <header class="navbar-area style-4">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container nav-container">
+                <div class="responsive-mobile-menu">
+                    <button class="menu toggle-btn d-block d-lg-none" data-target="#themefie_main_menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-left"></span>
+                        <span class="icon-right"></span>
+                    </button>
                 </div>
-                <!-- End Logo container-->
-                <div class="menu-extras topbar-custom">
-                    <ul class="list-inline float-right mb-0">
-                        <!-- language-->
-                        <li class="list-inline-item dropdown notification-list hide-phone"><a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">English <img
-                                    src="assets/images/flags/us_flag.jpg" class="ml-2" height="16" alt=""></a>
-                            <div class="dropdown-menu dropdown-menu-right language-switch">
-                                <a class="dropdown-item" href="#"><img src="assets/images/flags/italy_flag.jpg" alt="" height="16"><span>Italian </span></a>
-                                <a class="dropdown-item" href="#"><img src="assets/images/flags/french_flag.jpg" alt="" height="16"><span>French
-                                    </span></a>
-                                <a class="dropdown-item" href="#"><img src="assets/images/flags/spain_flag.jpg" alt="" height="16"><span>Spanish
-                                    </span></a>
-                                <a class="dropdown-item" href="#"><img src="assets/images/flags/russia_flag.jpg" alt="" height="16"><span>Russian</span></a>
-                            </div>
+                <div class="logo">
+                    <a class="main-logo" href="index.html"><img src="img/logo-not.png" height="120" width="70" alt="img"></a>
+                </div>
+                <div class="nav-right-part nav-right-part-mobile">
+                    <ul>
+                        <li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="themefie_main_menu">
+                    <ul class="navbar-nav menu-open text-end">
+                        <li class="current-menu-item">
+                            <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
                         </li>
-                        <!-- notification-->
-                        <li class="list-inline-item dropdown notification-list">
-                            <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false"><img src="img/notification.png" alt=""><span class="badge badge-success noti-icon-badge">21</span></a>
-                            <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-menu-lg">
-                                <!-- item-->
-                                <div class="dropdown-item noti-title">
-                                    <h5>Notification (3)</h5>
-                                </div>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-success"><i class="fa fa-bell"></i></div>
-                                    <p class="notify-details"><b>Your order is placed</b><small class="text-muted">Dummy
-                                            text of the printing and typesetting industry.</small></p>
-                                </a>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-warning"><i class="mdi mdi-message"></i></div>
-                                    <p class="notify-details"><b>New Message received</b><small class="text-muted">You
-                                            have 87 unread messages</small></p>
-                                </a>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-info"><i class="mdi mdi-martini"></i></div>
-                                    <p class="notify-details"><b>Your item is shipped</b><small class="text-muted">It is
-                                            a long established fact that a reader will</small></p>
-                                </a>
-                                <!-- All--><a href="javascript:void(0);" class="dropdown-item notify-item">View
-                                    All</a>
-                            </div>
+                        <li>
+                            <a href="survey.html"><i class="fa fa-list-alt"></i> Survey</a>
                         </li>
+                        <li class="menu-item-has-children">
+                            <a href="analytics.html"><i class="fa fa-fw fa-envelope"></i> Analytics</a>
+                            <ul class="sub-menu">
+                                <li><a href="analytics.html">Dashboard</a></li>
+                                <li><a href="result.html">Report</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="faq.html"><i class="fa fa-fw fa-user"></i> FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-right-part nav-right-part-desktop">
+                    <ul>
+                        <li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
                         <!-- User-->
                         <li class="list-inline-item dropdown notification-list">
                             <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false"><img src="assets/images/users/avatar-1.png" alt="user" class="rounded-circle"></a>
@@ -139,13 +117,8 @@
                                 <div class="dropdown-item noti-title">
                                     <h5>Welcome</h5>
                                 </div><a class="dropdown-item" href="#"><i
-                                        class="mdi mdi-account-circle m-r-5 text-muted"></i> Profile</a> <a class="dropdown-item" href="#"><i class="mdi mdi-wallet m-r-5 text-muted"></i> My
-                                    Wallet</a> <a class="dropdown-item" href="#"><span
-                                        class="badge badge-success float-right">5</span><i
-                                        class="mdi mdi-settings m-r-5 text-muted"></i> Settings</a> <a class="dropdown-item" href="#"><i
-                                        class="mdi mdi-lock-open-outline m-r-5 text-muted"></i> Lock screen</a>
-                                <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i
-                                        class="mdi mdi-logout m-r-5 text-muted"></i> Logout</a>
+                                        class="fas fa-user-circle m-r-5 text-muted"></i> Profile</a> <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Settings</a>
+                                <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
                             </div>
                         </li>
                         <li class="menu-item list-inline-item">
@@ -157,118 +130,110 @@
                         </li>
                     </ul>
                 </div>
-                <!-- end menu-extras -->
-                <div class="clearfix"></div>
             </div>
-            <!-- end container -->
-        </div>
-        <!-- end topbar-main -->
-        <!-- MENU Start -->
-        <div class="navbar-custom">
-            <div class="container-fluid">
-                <div id="navigation">
-                    <!-- Navigation Menu-->
-                    <div class="navbar">
-                        <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
-                        <a href="survey.html"><i class="fa fa-list-alt"></i> Survey</a>
-                        <a href="analytics.html"><i class="fa fa-fw fa-envelope"></i> Dashboard</a>
-                        <a class="active" href="#"><i class="fa fa-fw fa-user"></i> FAQ</a>
-                    </div>
-                    <!-- End navigation menu -->
-                </div>
-                <!-- end #navigation -->
-            </div>
-            <!-- end container -->
-        </div>
-        <!-- end navbar-custom -->
+        </nav>
     </header>
+    <!-- navbar end -->
     <!-- End Navigation Bar-->
-    <div class="wrapper">
-        <div class="container-fluid">
-            <!-- FAQ -->
+    <!-- breadcrumb Area Start-->
+    <section class="breadcrumb-area text-center">
+        <!--style-overlay-->
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 align-self-center">
+                    <div class="breadcrumb-inner">
+                        <h1 class="page-title">Frequently Asked Questions:</h1>
+                        <ul class="page-list breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">FAQ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb Area End -->
 
-            <div class="container" style="margin: 5px 250px;">
-
-                <h2>Frequently Asked Questions</h2>
-
-                <div class="accordion">
-                    <div class="accordion-item">
-                        <a>What can JavaScript Do?</a>
-                        <div class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <a>How JavaScript Can Modify HTML and CSS Values?</a>
-                        <div class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <a>What Is SVG?</a>
-                        <div class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <a>Is FAQ Section Matters In Website?</a>
-                        <div class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <a>How To Create a Light FAQ Element?</a>
-                        <div class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+    <!-- faq-Area Start-->
+    <section class="faq-area" style="background: var(--main-gradient)">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq-inner">
+                        <div class="faq-accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Why buy a domain name from Xsaas?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Why is domain name registration required?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    How does domain registration work?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mb-0">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    What domains are available from Xsaas?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </div>
-    <!-- end wrapper -->
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">© 2021 STS by TandovIT</div>
             </div>
         </div>
-    </footer>
-    <!-- End Footer -->
-    <!-- jQuery  -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/modernizr.min.js"></script>
-    <script src="assets/js/waves.js"></script>
-    <script src="assets/js/jquery.slimscroll.js"></script>
-    <script src="assets/js/jquery.nicescroll.js"></script>
-    <script src="assets/js/jquery.scrollTo.min.js"></script>
-    <script src="assets/plugins/skycons/skycons.min.js"></script>
-    <script src="assets/plugins/raphael/raphael-min.js"></script>
-    <script src="assets/plugins/morris/morris.min.js"></script>
-    <script src="assets/pages/dashborad.js"></script>
+    </section>
+    <!-- faq-Area end-->
+
     <!-- App js -->
     <script src="assets/js/app.js"></script>
-
-    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
-    <script src="function.js"></script>
-
-    <script>
-        const items = document.querySelectorAll(".accordion a");
-
-        function toggleAccordion() {
-            this.classList.toggle('active');
-            this.nextElementSibling.classList.toggle('active');
-        }
-
-        items.forEach(item => item.addEventListener('click', toggleAccordion));
-    </script>
+    <!-- all plugins here -->
+    <script src="assets/js/jquery.3.6.min.js"></script>
+    <script src="assets/js/bootstrap.min2.js"></script>
+    <script src="assets/js/imageloded.min.js"></script>
+    <script src="assets/js/counterup.js"></script>
+    <script src="assets/js/waypoint.js"></script>
+    <script src="assets/js/magnific.min.js"></script>
+    <script src="assets/js/nice-select.min.js"></script>
+    <script src="assets/js/fontawesome.min.js"></script>
+    <script src="assets/js/ripple.js"></script>
+    <script src="assets/js/owl.min.js"></script>
+    <script src="assets/js/slick-slider.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <!-- main js  -->
+    <script src="assets/js/main2.js"></script>
 
 
 </body>
