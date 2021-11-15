@@ -44,16 +44,15 @@ google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
-        ['Task', 'Hours per Day'],
-        ['Work', 11],
-        ['Eat', 2],
-        ['Commute', 2],
-        ['Watch TV', 2],
-        ['Sleep', 7]
+        ['Type', 'Percentage'],
+        ['FireFighter', 11],
+        ['Fire Rescuer', 2],
+        ['First Aider', 2],
+        ['No Traning', 2]
     ]);
 
     var options = {
-        title: 'My Daily Activities',
+        title: 'Classification Of Employees',
         is3D: true,
     };
 
