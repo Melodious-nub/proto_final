@@ -29,16 +29,26 @@
     <!-- Moris chart -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: "lato", sans-serif;
+            font-family: "Poppins", sans-serif;
         }
         
         .navigation-menu {
             display: flex;
             justify-content: space-evenly;
             /* Can be changed in the live sample */
+        }
+        
+        #map {
+            height: 450px;
+            /* The height is 400 pixels */
+            width: 100%;
+            /* The width is the width of the web page */
         }
     </style>
 </head>
@@ -90,7 +100,7 @@
                 <div class="collapse navbar-collapse" id="themefie_main_menu">
                     <ul class="navbar-nav menu-open text-end">
                         <li class="current-menu-item">
-                            <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+                            <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
                         </li>
                         <li>
                             <a href="survey.html"><i class="fa fa-list-alt"></i> Survey</a>
@@ -109,7 +119,6 @@
                 </div>
                 <div class="nav-right-part nav-right-part-desktop">
                     <ul>
-                        <li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
                         <!-- User-->
                         <li class="list-inline-item dropdown notification-list">
                             <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false"><img src="assets/images/users/avatar-1.png" alt="user" class="rounded-circle"></a>
@@ -155,11 +164,24 @@
     </section>
     <!-- breadcrumb Area End -->
     <div class="wrapper">
-        <div class="container-fluid">
+        <div class="container">
 
             <!-- Charts -->
 
             <div class="row">
+
+                <!-- Chart Map -->
+                <div class="col-lg-12">
+                    <div class="card m-b-30">
+                        <div class="card-body">
+                            <h4 class="mt-0 header-title">Map</h4>
+                            <p class="text-muted m-b-30 font-14 d-inline-block text-truncate w-100">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, assumenda!</p>
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end col -->
                 <div class="col-lg-6">
                     <div class="card m-b-30">
                         <div class="card-body">
@@ -196,18 +218,7 @@
                         <div class="card-body" style="height: 427px; width: 466px;">
                             <h4 class="mt-0 header-title"><strong>Demo Pi-Chart</strong></h4>
                             <p class="text-muted m-b-30 font-14 d-inline-block text-truncate w-100">Lorem, ipsum dolor.</p>
-                            <div id="piechart_3d" style="width: 450px; height: 300px; padding-left: 50px;"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end col -->
-                <!-- Chart Map -->
-                <div class="col-lg-12">
-                    <div class="card m-b-30">
-                        <div class="card-body">
-                            <h4 class="mt-0 header-title">Map</h4>
-                            <p class="text-muted m-b-30 font-14 d-inline-block text-truncate w-100">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, assumenda!</p>
-                            <div id="map_div"></div>
+                            <div id="piechart_3d" style="width: 100%;"></div>
                         </div>
                     </div>
                 </div>
@@ -271,30 +282,36 @@
 
     <!-- Google Charts -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load("current", {
-            "packages": ["map"],
-            // Note: you will need to get a mapsApiKey for your project.
-            // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
-            "mapsApiKey": "AIzaSyBuoRtvXLqoHrqIqjs3aKoWOd06Jzr_iwA"
-        });
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                ['Lat', 'Long', 'Name'],
-                [23.7768529, 90.41956617976984, 'Branch1'],
-                [24.3715513, 88.5921038, 'Branch2'],
-                [24.2507461, 89.9151479, 'Branch3'],
-                [24.7482129, 90.4099158, 'Branch3']
-            ]);
-
-            var map = new google.visualization.Map(document.getElementById('map_div'));
-            map.draw(data, {
-                showTooltip: true,
-                showInfoWindow: true
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            const dhaka = {
+                lat: 23.8103,
+                lng: 90.4125
+            };
+            const branch1 = {
+                lat: 23.8103,
+                lng: 89.4125
+            };
+            // The map, centered at Uluru
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 7,
+                center: dhaka,
+            });
+            // The marker, positioned at Uluru
+            const marker = new google.maps.Marker({
+                position: dhaka,
+                map: map,
+            });
+            const marker1 = new google.maps.Marker({
+                position: branch1,
+                map: map,
             });
         }
+    </script>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuXpmSAn-HlWZkpOBLukHoGvrMBHT7SGE&callback=initMap">
     </script>
     <script src="resource/chart-edit.js"></script>
 
