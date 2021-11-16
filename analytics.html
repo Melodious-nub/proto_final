@@ -10,7 +10,7 @@
     <meta content="Mannatthemes" name="author">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--fivicon icon-->
-    <link rel="icon" href="assets/img/fevicon.png">
+    <link rel="shortcut icon" href="img/main.png">
     <!--Chartist Chart CSS -->
     <link rel="stylesheet" href="assets/plugins/chartist/css/chartist.min.css">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -68,17 +68,6 @@
     <!-- preloader area end -->
     <div class="body-overlay" id="body-overlay"></div>
 
-    <!-- search popup area start -->
-    <div class="search-popup" id="search-popup">
-        <form action="index.html" class="search-form">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search.....">
-            </div>
-            <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
-        </form>
-    </div>
-    <!-- //. search Popup -->
-    </div>
     <!-- navbar start -->
     <header class="navbar-area style-4">
         <nav class="navbar navbar-expand-lg">
@@ -90,12 +79,7 @@
                     </button>
                 </div>
                 <div class="logo">
-                    <a class="main-logo" href="index.html"><img src="img/logo-not.png" height="120" width="70" alt="img"></a>
-                </div>
-                <div class="nav-right-part nav-right-part-mobile">
-                    <ul>
-                        <li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
-                    </ul>
+                    <a class="main-logo" href="index.html"><img src="img/main.png" width="80" height="80" alt="img"></a>
                 </div>
                 <div class="collapse navbar-collapse" id="themefie_main_menu">
                     <ul class="navbar-nav menu-open text-end">
@@ -176,7 +160,9 @@
                         <div class="card-body">
                             <h4 class="mt-0 header-title">Map</h4>
                             <p class="text-muted m-b-30 font-14 d-inline-block text-truncate w-100">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, assumenda!</p>
-                            <div id="map"></div>
+                            <div class="container">
+                                <div id="map"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -187,7 +173,9 @@
                         <div class="card-body">
                             <h4 class="mt-0 header-title"><strong>Info About Survey Completion</strong></h4>
                             <p class="text-muted m-b-30 font-14 d-inline-block text-truncate w-100">Hover Over The Donut Chart For Details</p>
-                            <div id="donut-example" style="width: 450px; height: 300px; padding-left: 50px;"></div>
+                            <div class="container">
+                                <div id="donut-example"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -195,30 +183,36 @@
                 <!-- Column Chart -->
                 <div class="col-lg-6">
                     <div class="card m-b-30">
-                        <div class="card-body" style="height: 427px; width: 466px;">
+                        <div class="card-body">
                             <h4 class="mt-0 header-title"><strong>Floor Area Of Branches</strong></h4>
                             <p class="text-muted m-b-30 font-14 d-inline-block text-truncate w-100">X-Axis: Branches & Y-Axis*100: Floor Area</p>
-                            <div id="bar-example" style="width: 450px; height: 300px; padding-left: 50px;"></div>
+                            <div class="container">
+                                <div id="bar-example"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- end col -->
                 <div class="col-lg-6">
                     <div class="card m-b-30">
-                        <div class="card-body" style="height: 427px; width: 466px;">
+                        <div class="card-body">
                             <h4 class="mt-0 header-title"><strong>Number Of Employees</strong></h4>
                             <p class="text-muted m-b-30 font-14 d-inline-block text-truncate w-100">X-Axis: Branches & Y-Axis*100: Employee No.</p>
-                            <div id="bar-example2" style="width: 450px; height: 300px; padding-left: 50px;"></div>
+                            <div class="container">
+                                <div id="bar-example2"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- end col -->
                 <div class="col-lg-6">
                     <div class="card m-b-30">
-                        <div class="card-body" style="height: 427px; width: 466px;">
+                        <div class="card-body">
                             <h4 class="mt-0 header-title"><strong>Demo Pi-Chart</strong></h4>
                             <p class="text-muted m-b-30 font-14 d-inline-block text-truncate w-100">Lorem, ipsum dolor.</p>
-                            <div id="piechart_3d" style="width: 100%;"></div>
+                            <div class="container">
+                                <div id="piechart_3d"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
