@@ -4530,7 +4530,7 @@ ul.solarsystem li.saturn.bottom-2 {
 }
 
 .navbar-area.style-4.navbar-area-fixed .nav-container .logo a img {
-    filter: brightness(10);
+    filter: brightness(1);
 }
 
 .banner-area.style-4 {
@@ -4765,7 +4765,7 @@ ul.solarsystem li.saturn.bottom-2 {
 }
 
 .navbar-area.style-5.navbar-area-fixed .nav-container .logo a img {
-    filter: brightness(10);
+    filter: brightness(1);
 }
 
 .navbar-area.style-5.navbar-area-fixed .nav-right-part ul li,
